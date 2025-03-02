@@ -83,6 +83,19 @@
         .sort-btn:hover {
             background-color: #c0392b;
         }
+        .suggest-btn {
+            background-color: #27ae60;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: 0.5rem;
+        }
+        .suggest-btn:hover {
+            background-color: #219653;
+        }
         .podcast-list {
             display: flex;
             flex-wrap: wrap;
@@ -134,11 +147,19 @@
             padding: 1rem;
             width: 100%;
         }
+        footer a {
+            color: #e74c3c;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 768px) {
             header h1 { font-size: 1.8rem; }
             header p { font-size: 1rem; }
             .podcast-card { width: 100%; }
-            .filter-btn, .sort-btn { margin: 0.3rem; }
+            .filter-btn, .sort-btn, .suggest-btn { margin: 0.3rem; }
         }
     </style>
 </head>
@@ -159,6 +180,7 @@
                 <button class="filter-btn" onclick="filterPods('legaltech')">Legal Tech</button>
                 <button class="filter-btn" onclick="filterPods('allgemein')">Allgemein</button>
                 <button class="sort-btn" onclick="sortPodsByRating()">Nach Bewertung sortieren</button>
+                <button class="suggest-btn" onclick="window.open('https://forms.gle/your-google-form-link', '_blank')">Vorschlag einreichen</button>
             </div>
         </div>
 
@@ -316,7 +338,7 @@
     </div>
 
     <footer>
-        <p>© 2025 Jura-Podcasts. Alle Rechte vorbehalten.</p>
+        <p>© 2025 Jura-Podcasts. Alle Rechte vorbehalten. | <a href="[Impressum URL]">Impressum</a> | <a href="[Datenschutz URL]">Datenschutz</a></p>
     </footer>
 
     <script>
@@ -325,7 +347,7 @@
             const cards = document.querySelectorAll('.podcast-card');
             cards.forEach(card => {
                 const matchesCategory = category === 'all' || card.getAttribute('data-category') === category;
-                const matchesSearch = card.style.display !== 'none'; // Respect search filter
+                const matchesSearch = card.style.display !== 'none';
                 if (matchesCategory && matchesSearch) {
                     card.style.display = 'block';
                 } else {
@@ -356,9 +378,9 @@
             cards.sort((a, b) => {
                 const ratingA = parseFloat(a.getAttribute('data-rating')) || 0;
                 const ratingB = parseFloat(b.getAttribute('data-rating')) || 0;
-                return ratingB - ratingA; // Descending order
+                return ratingB - ratingA;
             });
-            cards.forEach(card => list.appendChild(card)); // Re-append sorted cards
+            cards.forEach(card => list.appendChild(card));
         }
     </script>
 </body>
