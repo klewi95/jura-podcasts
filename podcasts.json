@@ -1,0 +1,242 @@
+[
+    {
+        "title": "Recht Aktuell",
+        "link": "#",
+        "description": "Ein Podcast von Prof. Martin Fries aus München, der sich mit Zivil- und Zivilprozessrecht beschäftigt.",
+        "category": "zivilrecht",
+        "rating": 4.4,
+        "recommend": "ZPO Kommentar",
+        "recommendLink": "#",
+        "tags": ["Zivilrecht", "ZPO", "Examen"]
+    },
+    {
+        "title": "Jurability – Rechtsprechung fürs Examen",
+        "link": "#",
+        "description": "Ein fallorientierter Podcast, der wichtige Examensentscheidungen aus dem Straf- und Zivilrecht bespricht.",
+        "category": "allgemein",
+        "rating": 4.5,
+        "recommend": "Staatsexamen Jura Übungsbuch",
+        "recommendLink": "#",
+        "tags": ["Examen", "Rechtsprechung"]
+    },
+    {
+        "title": "Die Juraflüsterer",
+        "link": "https://www.alpmann-schmidt.de/podcast",
+        "description": "Der Jura-Podcast von Alpmann Schmidt, der alle zwei Wochen aktuelle Rechtsprechung, Lerntipps und Infos zum Jurastudium bietet.",
+        "category": "allgemein",
+        "rating": 4.6,
+        "recommend": "Alpmann Schmidt Skript BGB",
+        "recommendLink": "#",
+        "tags": ["Rechtsprechung", "Lerntipps", "Examen"]
+    },
+    {
+        "title": "Recht verständlich",
+        "link": "https://www.justiz.nrw/Podcast",
+        "description": "Ein Podcast der Justiz NRW, in dem Julia Jacobs mit Experten über rechtliche Themen aus dem Alltag spricht.",
+        "category": "allgemein",
+        "rating": 4.3,
+        "recommend": "Jura für Dummies",
+        "recommendLink": "#",
+        "tags": ["Alltag", "Justiz"]
+    },
+    {
+        "title": "Räuberischer Espresso",
+        "link": "#",
+        "description": "Ein Podcast der Fachzeitschrift Juristische Arbeitsblätter (JA), der sich mit Fragen des Strafrechts im Alltag befasst.",
+        "category": "strafrecht",
+        "rating": 4.4,
+        "recommend": "Strafrecht Kommentar",
+        "recommendLink": "#",
+        "tags": ["StGB", "Alltag"]
+    },
+    {
+        "title": "Die Justizreporter*innen",
+        "link": "https://www.ardmediathek.de/podcast/die-justizreporter-innen",
+        "description": "Der Jura-Podcast der ARD-Rechtsredaktion, der über wichtige Gerichtsentscheidungen berichtet.",
+        "category": "allgemein",
+        "rating": 4.5,
+        "recommend": "Schönfelder Gesetzestexte",
+        "recommendLink": "#",
+        "tags": ["Rechtsprechung", "Justiz"]
+    },
+    {
+        "title": "Law Busters",
+        "link": "#",
+        "description": "Ein Podcast, der Filme und Serien juristisch und humorvoll bespricht.",
+        "category": "allgemein",
+        "rating": 4.2,
+        "recommend": "Recht im Film",
+        "recommendLink": "#",
+        "tags": ["Humor", "Popkultur"]
+    },
+    {
+        "title": "Und was denkst Du?",
+        "link": "#",
+        "description": "Ein Podcast, der sich mit verschiedenen Aspekten von Demokratie, Verfassung und Rechtsstaat beschäftigt.",
+        "category": "oeffentlichesrecht",
+        "rating": 4.3,
+        "recommend": "Grundgesetz Kommentar",
+        "recommendLink": "#",
+        "tags": ["ÖffRecht", "Demokratie"]
+    },
+    {
+        "title": "BRINGE DEINE KANZLEI NACH VORNE!",
+        "link": "#",
+        "description": "Ein Unternehmerpodcast für Rechtsanwälte und Rechtsanwältinnen von Clemens und Alexandra Pichler.",
+        "category": "legaltech",
+        "rating": 4.4,
+        "recommend": "Kanzleimanagement Handbuch",
+        "recommendLink": "#",
+        "tags": ["LegalTech", "Anwaltschaft"]
+    },
+    {
+        "title": "Justitias Töchter",
+        "link": "https://www.djb.de/podcast",
+        "description": "Ein Podcast des Deutschen Juristinnenbunds e.V. (djb) zu feministischer Rechtspolitik.",
+        "category": "allgemein",
+        "rating": 4.3,
+        "recommend": "Feministische Jurisprudenz",
+        "recommendLink": "#",
+        "tags": ["Rechtspolitik", "Feminismus"]
+    },
+    {
+        "title": "CMS To Go",
+        "link": "https://www.cms-law.com/deu/podcast",
+        "description": "Ein Podcast von CMS Deutschland, der rechtliche Themen aus verschiedenen Branchen diskutiert.",
+        "category": "legaltech",
+        "rating": 4.5,
+        "recommend": "Wirtschaftsrecht Einführung",
+        "recommendLink": "#",
+        "tags": ["LegalTech", "Branchenrecht"]
+    },
+    {
+        "title": "F.A.Z. Einspruch",
+        "link": "https://www.faz.net/podcasts/f-a-z-einspruch-podcast",
+        "description": "Der wohl bekannteste juristische Podcast in Deutschland mit 4,4 Sternen auf Spotify. Wöchentlich moderiert von Corinna Budras, Marlene Grunert und Constantin van Lijnden zu Recht, Justiz und Politik.",
+        "category": "oeffentlichesrecht",
+        "rating": 4.4,
+        "recommend": "Grundgesetz Kommentar",
+        "recommendLink": "#",
+        "tags": ["ÖffRecht", "Justiz", "Politik"]
+    },
+    {
+        "title": "Lage der Nation",
+        "link": "https://lagedernation.de",
+        "description": "Ein politischer Podcast mit starkem juristischen Fokus von Philip Banse und Richter Ulf Buermeyer, beeindruckende 4,9 Sterne auf Spotify.",
+        "category": "oeffentlichesrecht",
+        "rating": 4.9,
+        "recommend": "Verfassungsrecht Skript",
+        "recommendLink": "#",
+        "tags": ["ÖffRecht", "Politik", "Examen"]
+    },
+    {
+        "title": "Verbrechen (Zeit)",
+        "link": "https://www.zeit.de/serie/verbrechen",
+        "description": "Ein beliebter True Crime-Podcast, der auch unter Juristen große Reichweite genießt.",
+        "category": "strafrecht",
+        "rating": 4.5,
+        "recommend": "Schönfelder Gesetzestexte",
+        "recommendLink": "#",
+        "tags": ["StGB", "TrueCrime", "Justiz"]
+    },
+    {
+        "title": "Talking Legal Tech",
+        "link": "#",
+        "description": "Mit 4,8 Sternen auf Spotify ein führender Podcast zur Digitalisierung im Rechtsbereich.",
+        "category": "legaltech",
+        "rating": 4.8,
+        "recommend": "Legal Tech Grundlagen",
+        "recommendLink": "#",
+        "tags": ["LegalTech", "Digitalisierung"]
+    },
+    {
+        "title": "Sprechen wir über Mord?!",
+        "link": "https://www.swr.de/swrkultur/sprechen-wir-ueber-mord",
+        "description": "Ein True Crime-Podcast von SWR Kultur mit dem ehemaligen Bundesrichter Thomas Fischer.",
+        "category": "strafrecht",
+        "rating": 4.6,
+        "recommend": "Strafrecht Kommentar",
+        "recommendLink": "#",
+        "tags": ["StGB", "TrueCrime", "Examen"]
+    },
+    {
+        "title": "Die Rechtslage (LTO)",
+        "link": "https://www.lto.de/podcast",
+        "description": "Ein Podcast von Legal Tribune Online zu aktueller Rechtsprechung.",
+        "category": "allgemein",
+        "rating": 4.3,
+        "recommend": "Jura für Dummies",
+        "recommendLink": "#",
+        "tags": ["Rechtsprechung", "Allgemein"]
+    },
+    {
+        "title": "Jura To Go",
+        "link": "#",
+        "description": "Ein beliebter Podcast mit 4,6 Sternen auf Spotify, der juristische Fälle kompakt erklärt.",
+        "category": "allgemein",
+        "rating": 4.6,
+        "recommend": "Staatsexamen Jura Übungsbuch",
+        "recommendLink": "#",
+        "tags": ["Examen", "Allgemein"]
+    },
+    {
+        "title": "Gerechtigkeit & Loseblatt",
+        "link": "https://www.beck-aktuell.de/podcast",
+        "description": "Der Podcast von NJW und beck-aktuell zur Woche im Recht.",
+        "category": "allgemein",
+        "rating": 4.4,
+        "recommend": "NJW Jahresabo",
+        "recommendLink": "#",
+        "tags": ["Rechtspolitik", "Allgemein"]
+    },
+    {
+        "title": "Spruchreif (Jurafuchs)",
+        "link": "https://podcast.jurafuchs.de",
+        "description": "Ein Podcast mit über 250 Stunden Expertenwissen zu Rechtsfragen.",
+        "category": "allgemein",
+        "rating": 4.7,
+        "recommend": "Jurafuchs Lernkarten",
+        "recommendLink": "#",
+        "tags": ["Examen", "Rechtsprechung"]
+    },
+    {
+        "title": "zuRechtgehört!",
+        "link": "https://www.anwaltverein.de/podcast",
+        "description": "Der Podcast des Deutschen Anwaltvereins (DAV).",
+        "category": "allgemein",
+        "rating": 4.2,
+        "recommend": "Anwaltspraxis Handbuch",
+        "recommendLink": "#",
+        "tags": ["Anwaltschaft", "Allgemein"]
+    },
+    {
+        "title": "Jurafunk",
+        "link": "https://jurafunk.de",
+        "description": "Ein Podcast über Zivilrecht und Examensvorbereitung mit praxisnahen Tipps.",
+        "category": "zivilrecht",
+        "rating": 4.5,
+        "recommend": "Palandt BGB",
+        "recommendLink": "#",
+        "tags": ["BGB", "Klausurtipps"]
+    },
+    {
+        "title": "Rechtsprechungs-Podcast",
+        "link": "https://rechtsprechungspodcast.de",
+        "description": "Diskussionen zu aktuellen Strafrechtsfällen – ideal für Profis und Studierende.",
+        "category": "strafrecht",
+        "rating": 4.4,
+        "recommend": "Schönfelder Gesetzestexte",
+        "recommendLink": "#",
+        "tags": ["StGB", "Examen"]
+    },
+    {
+        "title": "Verfassungsblog Podcast",
+        "link": "https://verfassungsblog.de/podcast",
+        "description": "Verfassungsrecht und Verwaltungsrecht, leicht verständlich erklärt.",
+        "category": "oeffentlichesrecht",
+        "rating": 4.3,
+        "recommend": "Grundgesetz Kommentar",
+        "recommendLink": "#",
+        "tags": ["ÖffRecht", "Beginner"]
+    }
+]
