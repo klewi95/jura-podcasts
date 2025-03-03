@@ -1,13 +1,15 @@
 [
     {
-        "title": "Recht Aktuell",
+        "title": "#fussnote",
         "link": "#",
         "description": "Ein Podcast von Prof. Martin Fries aus München, der sich mit Zivil- und Zivilprozessrecht beschäftigt.",
         "category": "zivilrecht",
         "rating": 4.4,
         "recommend": "ZPO Kommentar",
         "recommendLink": "#",
-        "tags": ["Zivilrecht", "ZPO", "Examen"]
+        "tags": ["Zivilrecht", "ZPO", "Examen"],
+        "spotifyLink": "https://open.spotify.com/show/6DHrWWdjdAK7KX5HfnbYPg?si=b28f94c820b74ed2",
+        "appleLink": "https://podcasts.apple.com/de/podcast/fussnote/id1476110850"
     },
     {
         "title": "Jurability – Rechtsprechung fürs Examen",
@@ -17,7 +19,9 @@
         "rating": 4.5,
         "recommend": "Staatsexamen Jura Übungsbuch",
         "recommendLink": "#",
-        "tags": ["Examen", "Rechtsprechung"]
+        "tags": ["Examen", "Rechtsprechung"],
+        "spotifyLink": "https://open.spotify.com/show/1GNQTIDQ2H4EH05H9y3VLA?si=f086c335f8e54011",
+        "appleLink": "https://podcasts.apple.com/de/podcast/jurability-rechtsprechung-f%C3%BCrs-examen/id1667151433"
     },
     {
         "title": "Die Juraflüsterer",
@@ -27,7 +31,9 @@
         "rating": 4.6,
         "recommend": "Alpmann Schmidt Skript BGB",
         "recommendLink": "#",
-        "tags": ["Rechtsprechung", "Lerntipps", "Examen"]
+        "tags": ["Rechtsprechung", "Lerntipps", "Examen"],
+        "spotifyLink": "https://open.spotify.com/show/28saXKoS1YwRrTf9DQV4oa?si=dfd11766faef45bd",
+        "appleLink": "https://podcasts.apple.com/de/podcast/die-jurafl%C3%BCsterer-der-jura-podcast-von-alpmann-schmidt/id1681131017"
     },
     {
         "title": "Recht verständlich",
@@ -37,7 +43,9 @@
         "rating": 4.3,
         "recommend": "Jura für Dummies",
         "recommendLink": "#",
-        "tags": ["Alltag", "Justiz"]
+        "tags": ["Alltag", "Justiz"],
+        "spotifyLink": "https://open.spotify.com/show/7mTLJrbt2yWpZaZy3QuK1Y?si=bd305a2aae5a4fec",
+        "appleLink": "https://podcasts.apple.com/de/podcast/recht-verst%C3%A4ndlich/id1742492241"
     },
     {
         "title": "Räuberischer Espresso",
@@ -47,7 +55,9 @@
         "rating": 4.4,
         "recommend": "Strafrecht Kommentar",
         "recommendLink": "#",
-        "tags": ["StGB", "Alltag"]
+        "tags": ["StGB", "Alltag"],
+        "spotifyLink": "https://open.spotify.com/show/0getQAdLQYWarrn3KrLWnA?si=4f39fe51ee954d21",
+        "appleLink": "https://podcasts.apple.com/de/podcast/r%C3%A4uberischer-espresso/id1542331955"
     },
     {
         "title": "Die Justizreporter*innen",
@@ -57,7 +67,9 @@
         "rating": 4.5,
         "recommend": "Schönfelder Gesetzestexte",
         "recommendLink": "#",
-        "tags": ["Rechtsprechung", "Justiz"]
+        "tags": ["Rechtsprechung", "Justiz"],
+        "spotifyLink": "https://open.spotify.com/show/6MsaCOSHo8YRCe3GKVaAyD?si=83c76b1c158f40d4",
+        "appleLink": "https://podcasts.apple.com/de/podcast/die-justizreporter-innen/id1500906148"
     },
     {
         "title": "Law Busters",
@@ -67,7 +79,9 @@
         "rating": 4.2,
         "recommend": "Recht im Film",
         "recommendLink": "#",
-        "tags": ["Humor", "Popkultur"]
+        "tags": ["Humor", "Popkultur"],
+        "spotifyLink": "https://open.spotify.com/show/1XAhSpNum2KZijX0VyGQV4?si=f75455d61aee4d5c",
+        "appleLink": "https://podcasts.apple.com/de/podcast/law-busters-spoiler-alert/id1576305074"
     },
     {
         "title": "Und was denkst Du?",
@@ -77,7 +91,9 @@
         "rating": 4.3,
         "recommend": "Grundgesetz Kommentar",
         "recommendLink": "#",
-        "tags": ["ÖffRecht", "Demokratie"]
+        "tags": ["ÖffRecht", "Demokratie"],
+        "spotifyLink": "https://open.spotify.com/show/6q96SEA7WtSse6TGJsxNFt?si=93db6396b6784567",
+        "appleLink": "https://podcasts.apple.com/de/podcast/und-was-denkst-du/id1732348540"
     },
     {
         "title": "BRINGE DEINE KANZLEI NACH VORNE!",
@@ -87,7 +103,9 @@
         "rating": 4.4,
         "recommend": "Kanzleimanagement Handbuch",
         "recommendLink": "#",
-        "tags": ["LegalTech", "Anwaltschaft"]
+        "tags": ["LegalTech", "Anwaltschaft"],
+        "spotifyLink": "https://open.spotify.com/show/example1",
+        "appleLink": "https://podcasts.apple.com/de/podcast/example1"
     },
     {
         "title": "Justitias Töchter",
@@ -97,7 +115,9 @@
         "rating": 4.3,
         "recommend": "Feministische Jurisprudenz",
         "recommendLink": "#",
-        "tags": ["Rechtspolitik", "Feminismus"]
+        "tags": ["Rechtspolitik", "Feminismus"],
+        "spotifyLink": "https://open.spotify.com/show/5LErW33ewcq65eEltYFUpg?si=6d61fe1fe3ea4b97",
+        "appleLink": "https://podcasts.apple.com/de/podcast/justitias-t%C3%B6chter-der-podcast-zu-feministischer-rechtspolitik/id1516490457"
     },
     {
         "title": "CMS To Go",
@@ -107,7 +127,9 @@
         "rating": 4.5,
         "recommend": "Wirtschaftsrecht Einführung",
         "recommendLink": "#",
-        "tags": ["LegalTech", "Branchenrecht"]
+        "tags": ["LegalTech", "Branchenrecht"],
+        "spotifyLink": "https://open.spotify.com/show/example1",
+        "appleLink": "https://podcasts.apple.com/de/podcast/cms-to-go/id1528177625"
     },
     {
         "title": "F.A.Z. Einspruch",
@@ -117,7 +139,9 @@
         "rating": 4.4,
         "recommend": "Grundgesetz Kommentar",
         "recommendLink": "#",
-        "tags": ["ÖffRecht", "Justiz", "Politik"]
+        "tags": ["ÖffRecht", "Justiz", "Politik"],
+        "spotifyLink": "https://open.spotify.com/show/6aCchZuJMaLC80MkeuTsTQ?si=8ada246160d34c94",
+        "appleLink": "https://podcasts.apple.com/de/podcast/f-a-z-einspruch/id1315944194"
     },
     {
         "title": "Lage der Nation",
@@ -127,7 +151,9 @@
         "rating": 4.9,
         "recommend": "Verfassungsrecht Skript",
         "recommendLink": "#",
-        "tags": ["ÖffRecht", "Politik", "Examen"]
+        "tags": ["ÖffRecht", "Politik", "Examen"],
+        "spotifyLink": "https://open.spotify.com/show/7a3LWj5xSFhFRYmztS8wgK?si=abff8ccd685f4e17",
+        "appleLink": "https://podcasts.apple.com/de/podcast/lage-der-nation-der-politik-podcast-aus-berlin/id1092957894"
     },
     {
         "title": "Verbrechen (Zeit)",
@@ -137,17 +163,21 @@
         "rating": 4.5,
         "recommend": "Schönfelder Gesetzestexte",
         "recommendLink": "#",
-        "tags": ["StGB", "TrueCrime", "Justiz"]
+        "tags": ["StGB", "TrueCrime", "Justiz"],
+        "spotifyLink": "https://open.spotify.com/show/3gZaAYXAQAh09UlKbYaK49?si=ee06500171574098",
+        "appleLink": "https://podcasts.apple.com/de/podcast/verbrechen/id1374777077"
     },
     {
-        "title": "Talking Legal Tech",
+        "title": "Legal Tech Talk",
         "link": "#",
         "description": "Mit 4,8 Sternen auf Spotify ein führender Podcast zur Digitalisierung im Rechtsbereich.",
         "category": "legaltech",
         "rating": 4.8,
         "recommend": "Legal Tech Grundlagen",
         "recommendLink": "#",
-        "tags": ["LegalTech", "Digitalisierung"]
+        "tags": ["LegalTech", "Digitalisierung"],
+        "spotifyLink": "https://open.spotify.com/show/4c5356FOCNiyslAb1XyA1d?si=4b1c9ebdf7fe4387",
+        "appleLink": "https://podcasts.apple.com/de/podcast/legal-tech-talk-legal-tech-podcast/id1481440154"
     },
     {
         "title": "Sprechen wir über Mord?!",
@@ -157,7 +187,9 @@
         "rating": 4.6,
         "recommend": "Strafrecht Kommentar",
         "recommendLink": "#",
-        "tags": ["StGB", "TrueCrime", "Examen"]
+        "tags": ["StGB", "TrueCrime", "Examen"],
+        "spotifyLink": "https://open.spotify.com/show/1PsCKgZc1jV3uZDIJxGs2J?si=4272718612374d01",
+        "appleLink": "https://podcasts.apple.com/de/podcast/sprechen-wir-%C3%BCber-mord-der-swr-kultur-true-crime-podcast/id1501132609"
     },
     {
         "title": "Die Rechtslage (LTO)",
@@ -167,7 +199,9 @@
         "rating": 4.3,
         "recommend": "Jura für Dummies",
         "recommendLink": "#",
-        "tags": ["Rechtsprechung", "Allgemein"]
+        "tags": ["Rechtsprechung", "Allgemein"],
+        "spotifyLink": "https://open.spotify.com/show/1P27XUG28aiSJZbuhTbXTz?si=983ae0e5d3b14150",
+        "appleLink": "https://podcasts.apple.com/de/podcast/die-rechtslage-lto/id1167542118"
     },
     {
         "title": "Jura To Go",
@@ -177,7 +211,9 @@
         "rating": 4.6,
         "recommend": "Staatsexamen Jura Übungsbuch",
         "recommendLink": "#",
-        "tags": ["Examen", "Allgemein"]
+        "tags": ["Examen", "Allgemein"],
+        "spotifyLink": "https://open.spotify.com/show/0QocH3D1SQR0Li8UJNmlYi?si=91123e7537fa4fbf",
+        "appleLink": "https://podcasts.apple.com/de/podcast/jura-to-go/id1505792323"
     },
     {
         "title": "Gerechtigkeit & Loseblatt",
@@ -187,7 +223,9 @@
         "rating": 4.4,
         "recommend": "NJW Jahresabo",
         "recommendLink": "#",
-        "tags": ["Rechtspolitik", "Allgemein"]
+        "tags": ["Rechtspolitik", "Allgemein"],
+        "spotifyLink": "https://open.spotify.com/show/4jFmjWxMBcF3VWL7UuqIoZ?si=8882593aa71a48c5",
+        "appleLink": "https://podcasts.apple.com/de/podcast/gerechtigkeit-loseblatt/id1740265406"
     },
     {
         "title": "Spruchreif (Jurafuchs)",
@@ -197,7 +235,9 @@
         "rating": 4.7,
         "recommend": "Jurafuchs Lernkarten",
         "recommendLink": "#",
-        "tags": ["Examen", "Rechtsprechung"]
+        "tags": ["Examen", "Rechtsprechung"],
+        "spotifyLink": "https://open.spotify.com/show/6TxU6iCti1McMQtz06GtIt?si=97e1a744e18f4d63",
+        "appleLink": "https://podcasts.apple.com/de/podcast/spruchreif-jurafuchs-podcast/id1569148355"
     },
     {
         "title": "zuRechtgehört!",
@@ -207,7 +247,9 @@
         "rating": 4.2,
         "recommend": "Anwaltspraxis Handbuch",
         "recommendLink": "#",
-        "tags": ["Anwaltschaft", "Allgemein"]
+        "tags": ["Anwaltschaft", "Allgemein"],
+        "spotifyLink": "https://open.spotify.com/show/5QeKez3LYIGWjlcSQFt43g?si=81a67da26d0f43eb",
+        "appleLink": "https://podcasts.apple.com/de/podcast/zurechtgeh%C3%B6rt-der-dav-podcast/id1550602628"
     },
     {
         "title": "Jurafunk",
@@ -217,7 +259,9 @@
         "rating": 4.5,
         "recommend": "Palandt BGB",
         "recommendLink": "#",
-        "tags": ["BGB", "Klausurtipps"]
+        "tags": ["BGB", "Klausurtipps"],
+        "spotifyLink": "hhttps://open.spotify.com/show/1tX0TinMwqgCisE9Nr4NTL?si=1786fbb18fed4ad8",
+        "appleLink": "https://podcasts.apple.com/de/podcast/jurafunk-de-und-juristenfunk-de/id271586007"
     },
     {
         "title": "Rechtsprechungs-Podcast",
@@ -227,7 +271,9 @@
         "rating": 4.4,
         "recommend": "Schönfelder Gesetzestexte",
         "recommendLink": "#",
-        "tags": ["StGB", "Examen"]
+        "tags": ["StGB", "Examen"],
+        "spotifyLink": "https://open.spotify.com/show/example1",
+        "appleLink": "https://podcasts.apple.com/de/podcast/example1"
     },
     {
         "title": "Verfassungsblog Podcast",
@@ -237,6 +283,8 @@
         "rating": 4.3,
         "recommend": "Grundgesetz Kommentar",
         "recommendLink": "#",
-        "tags": ["ÖffRecht", "Beginner"]
+        "tags": ["ÖffRecht", "Beginner"],
+        "spotifyLink": "https://open.spotify.com/show/example1",
+        "appleLink": "https://podcasts.apple.com/de/podcast/example1"
     }
 ]

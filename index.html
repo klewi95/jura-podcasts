@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Jura-Podcasts - Deine zentrale Plattform für juristische Podcasts – sortiert, zusammengefasst und mit Lernhilfen für Studierende und Referendare.">
     <title>Jura-Podcasts | Legal Learning Redefined</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="alternate icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* CSS RESET AND VARIABLES */
@@ -977,6 +979,45 @@
         .theme-switch:hover i {
             transform: rotate(30deg);
         }
+
+        /* STREAMING BUTTONS */
+        .podcast-card__streaming {
+            display: flex;
+            gap: var(--space-2);
+            margin-bottom: var(--space-4);
+        }
+
+        .podcast-card__streaming-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--border-radius-full);
+            font-size: 0.875rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all var(--transition-normal) var(--easing);
+        }
+
+        .podcast-card__spotify-btn {
+            background-color: #1DB954; /* Spotify-Grün */
+            color: white;
+        }
+
+        .podcast-card__spotify-btn:hover {
+            background-color: #1aa34a;
+            transform: translateY(-2px);
+        }
+
+        .podcast-card__apple-btn {
+            background-color: #FB5B5B; /* Apple Podcasts Rot */
+            color: white;
+        }
+
+        .podcast-card__apple-btn:hover {
+            background-color: #e74c4c;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body data-theme="light">
@@ -1003,6 +1044,7 @@
                         <button class="filter-tab filter-orecht" data-category="oeffentlichesrecht">Öffentliches Recht</button>
                         <button class="filter-tab filter-legaltech" data-category="legaltech">Legal Tech</button>
                         <button class="filter-tab filter-allgemein" data-category="allgemein">Allgemein</button>
+                        <button class="filter-tab filter-prozessrecht" data-category="prozessrecht">Prozessrecht</button>
                     </div>
                     
                     <div class="filter-actions">
@@ -1154,9 +1196,24 @@
                 card.setAttribute('data-rating', podcast.rating);
                 card.style.animationDelay = `${index * 0.05}s`;
                 
+                // Create tags HTML
                 const tagsHtml = podcast.tags.map(tag => 
                     `<span class="podcast-card__tag">${tag}</span>`
                 ).join('');
+
+                // Create streaming buttons HTML - nur anzeigen, wenn Links vorhanden sind
+                const streamingButtonsHtml = `
+                    <div class="podcast-card__streaming">
+                        ${podcast.spotifyLink ? `
+                            <a href="${podcast.spotifyLink}" target="_blank" class="podcast-card__streaming-btn podcast-card__spotify-btn">
+                                <i class="fab fa-spotify"></i> Spotify
+                            </a>` : ''}
+                        ${podcast.appleLink ? `
+                            <a href="${podcast.appleLink}" target="_blank" class="podcast-card__streaming-btn podcast-card__apple-btn">
+                                <i class="fab fa-apple"></i> Apple
+                            </a>` : ''}
+                    </div>
+                `;
                 
                 card.innerHTML = `
                     <div class="podcast-card__color-tag"></div>
@@ -1170,6 +1227,7 @@
                             <span class="podcast-card__rating-text">${podcast.rating.toFixed(1)}</span>
                         </div>
                         <p class="podcast-card__description">${podcast.description}</p>
+                        ${streamingButtonsHtml}
                         <div class="podcast-card__recommendation">
                             <i class="fas fa-book"></i>
                             <span>Empfohlen: <a href="${podcast.recommendLink}" target="_blank">${podcast.recommend}</a></span>
