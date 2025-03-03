@@ -3,391 +3,1637 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jura-Podcasts – Deine Plattform für juristisches Lernen</title>
+    <meta name="description" content="Jura-Podcasts - Deine zentrale Plattform für juristische Podcasts – sortiert, zusammengefasst und mit Lernhilfen für Studierende und Referendare.">
+    <title>Jura-Podcasts | Legal Learning Redefined</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        * {
+        /* CSS RESET AND VARIABLES */
+        :root {
+            /* Main Colors */
+            --primary: #6366f1;
+            --primary-light: #818cf8;
+            --primary-dark: #4f46e5;
+            --secondary: #f43f5e;
+            --secondary-light: #fb7185;
+            
+            /* Neutral Colors */
+            --surface: #ffffff;
+            --background: #f8fafc;
+            --dark: #0f172a;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-300: #cbd5e1;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-800: #1e293b;
+            --gray-900: #0f172a;
+            
+            /* Categorical Colors */
+            --zivilrecht: #3b82f6;
+            --zivilrecht-light: #93c5fd;
+            --strafrecht: #f43f5e;
+            --strafrecht-light: #fda4af;
+            --orecht: #10b981;
+            --orecht-light: #6ee7b7;
+            --legaltech: #8b5cf6;
+            --legaltech-light: #c4b5fd;
+            --allgemein: #64748b;
+            --allgemein-light: #cbd5e1;
+            
+            /* Gradients */
+            --gradient-primary: linear-gradient(145deg, var(--primary), var(--primary-dark));
+            --gradient-secondary: linear-gradient(145deg, var(--secondary), #db2777);
+            
+            /* UI Elements */
+            --border-radius-sm: 0.375rem;
+            --border-radius-md: 0.75rem;
+            --border-radius-lg: 1.5rem;
+            --border-radius-xl: 2rem;
+            --border-radius-full: 9999px;
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+            --shadow-glow: 0 0 15px rgba(99, 102, 241, 0.5);
+            
+            /* Typography */
+            --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            
+            /* Spacing */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            
+            /* Animations */
+            --transition-fast: 150ms;
+            --transition-normal: 250ms;
+            --transition-slow: 350ms;
+            --easing: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        *, *::before, *::after {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, sans-serif;
+            font-family: var(--font-sans);
         }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+        
         body {
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: var(--background);
+            color: var(--gray-800);
             line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
-        header {
-            background-color: #2c3e50;
+        
+        img, picture, video, canvas, svg {
+            display: block;
+            max-width: 100%;
+        }
+        
+        button, input, select, textarea {
+            font: inherit;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            overflow-wrap: break-word;
+            line-height: 1.2;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+        }
+        
+        p {
+            overflow-wrap: break-word;
+        }
+        
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        /* LAYOUT */
+        .container {
+            width: 100%;
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: var(--space-4);
+            padding-right: var(--space-4);
+        }
+        
+        .main {
+            flex: 1;
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            position: relative;
+            background: var(--gradient-primary);
             color: white;
+            padding: var(--space-16) var(--space-4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 2rem 1rem;
+            overflow: hidden;
+            isolation: isolate;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(var(--primary-light), 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(var(--primary-dark), 0.15) 0%, transparent 50%);
+            z-index: -1;
+        }
+        
+        .hero__content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero__title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: var(--space-4);
+            line-height: 1.1;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero__title::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -0.5rem;
+            width: 40%;
+            height: 0.25rem;
+            background: var(--secondary);
+            border-radius: var(--border-radius-full);
+        }
+        
+        .hero__subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.25rem);
+            max-width: 700px;
+            margin: 0 auto var(--space-8);
+            opacity: 0.95;
+        }
+        
+        /* FILTERS */
+        .filters-container {
             position: sticky;
+            top: var(--space-4);
+            z-index: 50;
+            margin-top: -3rem;
+            margin-bottom: var(--space-8);
+            transition: transform var(--transition-normal) var(--easing);
+        }
+        
+        .filters {
+            background-color: var(--surface);
+            border-radius: var(--border-radius-xl);
+            box-shadow: var(--shadow-xl);
+            padding: var(--space-6);
+            overflow: hidden;
+            transition: all var(--transition-normal) var(--easing);
+        }
+        
+        .filters--condensed {
+            padding: var(--space-4);
+        }
+        
+        .search-container {
+            position: relative;
+            margin-bottom: var(--space-6);
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: var(--space-4) var(--space-4) var(--space-4) var(--space-12);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--border-radius-full);
+            background-color: var(--gray-50);
+            font-size: 1rem;
+            transition: all var(--transition-normal) var(--easing);
+        }
+        
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+            background-color: white;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: var(--space-4);
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-500);
+            pointer-events: none;
+        }
+        
+        .filter-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-2);
+            margin-bottom: var(--space-6);
+        }
+        
+        .filter-tab {
+            background-color: var(--gray-100);
+            color: var(--gray-700);
+            padding: var(--space-2) var(--space-4);
+            border: none;
+            border-radius: var(--border-radius-full);
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-normal) var(--easing);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .filter-tab::before {
+            content: '';
+            position: absolute;
             top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: opacity var(--transition-normal) var(--easing);
+            z-index: -1;
+        }
+        
+        .filter-tab:hover {
+            color: var(--primary);
+            background-color: var(--gray-200);
+        }
+        
+        .filter-tab.active {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .filter-tab.active::before {
+            opacity: 1;
+        }
+        
+        .filter-zivilrecht.active {
+            background-color: var(--zivilrecht);
+        }
+        
+        .filter-strafrecht.active {
+            background-color: var(--strafrecht);
+        }
+        
+        .filter-orecht.active {
+            background-color: var(--orecht);
+        }
+        
+        .filter-legaltech.active {
+            background-color: var(--legaltech);
+        }
+        
+        .filter-allgemein.active {
+            background-color: var(--allgemein);
+        }
+        
+        .filter-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+        }
+        
+        .action-button {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-5);
+            border: none;
+            border-radius: var(--border-radius-full);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all var(--transition-normal) var(--easing);
+        }
+        
+        .sort-button {
+            background-color: var(--surface);
+            color: var(--gray-700);
+            border: 1px solid var(--gray-200);
+        }
+        
+        .sort-button:hover {
+            border-color: var(--gray-400);
+            color: var(--gray-900);
+        }
+        
+        .suggest-button {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .suggest-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .view-toggle {
+            display: flex;
+            gap: var(--space-1);
+            background-color: var(--gray-100);
+            padding: var(--space-1);
+            border-radius: var(--border-radius-full);
+        }
+        
+        .view-toggle-button {
+            padding: var(--space-2);
+            background-color: transparent;
+            border: none;
+            border-radius: var(--border-radius-full);
+            color: var(--gray-500);
+            cursor: pointer;
+            transition: all var(--transition-fast) var(--easing);
+        }
+        
+        .view-toggle-button:hover {
+            color: var(--gray-700);
+        }
+        
+        .view-toggle-button.active {
+            background-color: white;
+            color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        /* PODCAST GRID */
+        .podcast-layout {
+            margin-bottom: var(--space-16);
+        }
+        
+        .podcast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: var(--space-6);
+            margin-top: var(--space-8);
+        }
+        
+        .podcast-grid.list-view {
+            grid-template-columns: 1fr;
+        }
+        
+        .podcast-card {
+            position: relative;
+            background-color: var(--surface);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+            transition: all var(--transition-normal) var(--easing);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .podcast-card:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .podcast-grid.list-view .podcast-card {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        .podcast-card__color-tag {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0.25rem;
+            background: var(--gradient-primary);
+        }
+        
+        .podcast-card.zivilrecht .podcast-card__color-tag {
+            background: linear-gradient(90deg, var(--zivilrecht), var(--zivilrecht-light));
+        }
+        
+        .podcast-card.strafrecht .podcast-card__color-tag {
+            background: linear-gradient(90deg, var(--strafrecht), var(--strafrecht-light));
+        }
+        
+        .podcast-card.oeffentlichesrecht .podcast-card__color-tag {
+            background: linear-gradient(90deg, var(--orecht), var(--orecht-light));
+        }
+        
+        .podcast-card.legaltech .podcast-card__color-tag {
+            background: linear-gradient(90deg, var(--legaltech), var(--legaltech-light));
+        }
+        
+        .podcast-card.allgemein .podcast-card__color-tag {
+            background: linear-gradient(90deg, var(--allgemein), var(--gray-500));
+        }
+        
+        .podcast-card__category {
+            position: absolute;
+            top: var(--space-4);
+            right: var(--space-4);
+            padding: var(--space-1) var(--space-3);
+            background-color: var(--gray-100);
+            color: var(--gray-700);
+            border-radius: var(--border-radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
             z-index: 10;
         }
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+        
+        .podcast-card.zivilrecht .podcast-card__category {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--zivilrecht);
         }
-        header p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto;
+        
+        .podcast-card.strafrecht .podcast-card__category {
+            background-color: rgba(244, 63, 94, 0.1);
+            color: var(--strafrecht);
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
+        
+        .podcast-card.oeffentlichesrecht .podcast-card__category {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--orecht);
         }
-        .controls {
-            text-align: center;
-            margin: 1rem 0;
+        
+        .podcast-card.legaltech .podcast-card__category {
+            background-color: rgba(139, 92, 246, 0.1);
+            color: var(--legaltech);
         }
-        .search-bar {
+        
+        .podcast-card.allgemein .podcast-card__category {
+            background-color: rgba(100, 116, 139, 0.1);
+            color: var(--allgemein);
+        }
+        
+        .podcast-card__content {
+            padding: var(--space-6);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .podcast-grid.list-view .podcast-card__content {
+            flex: 1;
+            max-width: 70%;
+        }
+        
+        .podcast-card__title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: var(--space-3);
+            transition: color var(--transition-normal) var(--easing);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .podcast-card__title a:hover {
+            color: var(--primary);
+        }
+        
+        .podcast-card__rating {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            margin-bottom: var(--space-4);
+        }
+        
+        .podcast-card__stars {
+            display: flex;
+            color: #fbbf24;
+        }
+        
+        .podcast-card__stars i {
+            font-size: 0.875rem;
+        }
+        
+        .podcast-card__rating-text {
+            font-weight: 600;
+            color: var(--gray-700);
+            font-size: 0.875rem;
+        }
+        
+        .podcast-card__description {
+            color: var(--gray-600);
+            margin-bottom: var(--space-4);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            font-size: 0.9375rem;
+        }
+        
+        .podcast-grid.list-view .podcast-card__description {
+            -webkit-line-clamp: 2;
+        }
+        
+        .podcast-card__recommendation {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-3);
+            background-color: var(--gray-50);
+            border-radius: var(--border-radius-md);
+            margin-top: auto;
+            font-size: 0.875rem;
+        }
+        
+        .podcast-card__recommendation i {
+            color: var(--primary);
+        }
+        
+        .podcast-card__recommendation a {
+            color: var(--primary);
+            font-weight: 500;
+            transition: all var(--transition-fast) var(--easing);
+        }
+        
+        .podcast-card__recommendation a:hover {
+            text-decoration: underline;
+        }
+        
+        .podcast-card__tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-2);
+            padding-top: var(--space-4);
+            border-top: 1px solid var(--gray-100);
+            margin-top: var(--space-4);
+        }
+        
+        .podcast-grid.list-view .podcast-card__tags {
             width: 100%;
-            max-width: 400px;
-            padding: 0.5rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-            margin-bottom: 1rem;
+            padding: var(--space-4) var(--space-6);
+            margin-top: 0;
         }
-        .filters {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
+        
+        .podcast-card__tag {
+            padding: var(--space-1) var(--space-3);
+            background-color: var(--gray-100);
+            color: var(--gray-600);
+            border-radius: var(--border-radius-full);
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: all var(--transition-fast) var(--easing);
         }
-        .filter-btn {
-            background-color: #2c3e50;
+        
+        .podcast-card__tag:hover {
+            background-color: var(--gray-200);
+            color: var(--gray-800);
+        }
+        
+        /* NO RESULTS */
+        .no-results {
+            display: none;
+            padding: var(--space-10);
+            background-color: var(--surface);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            margin-top: var(--space-8);
+        }
+        
+        .no-results__icon {
+            font-size: 3rem;
+            color: var(--gray-400);
+            margin-bottom: var(--space-4);
+        }
+        
+        .no-results__title {
+            font-size: 1.5rem;
+            color: var(--gray-800);
+            margin-bottom: var(--space-4);
+        }
+        
+        .no-results__message {
+            color: var(--gray-600);
+            margin-bottom: var(--space-6);
+            max-width: 25rem;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .no-results__button {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
+            background-color: var(--primary);
             color: white;
-            padding: 0.5rem 1rem;
+            padding: var(--space-3) var(--space-6);
             border: none;
-            border-radius: 5px;
+            border-radius: var(--border-radius-full);
+            font-weight: 500;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: all var(--transition-normal) var(--easing);
         }
-        .filter-btn:hover {
-            background-color: #34495e;
+        
+        .no-results__button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
         }
-        .sort-btn {
-            background-color: #e74c3c;
+        
+        /* CTA SECTION */
+        .cta-section {
+            position: relative;
+            background: var(--gradient-primary);
             color: white;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            border-radius: var(--border-radius-lg);
+            padding: var(--space-10) var(--space-6);
+            margin-bottom: var(--space-16);
+            text-align: center;
+            overflow: hidden;
+            isolation: isolate;
         }
-        .sort-btn:hover {
-            background-color: #c0392b;
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            z-index: -1;
         }
-        .suggest-btn {
-            background-color: #27ae60;
-            color: white;
-            padding: 0.5rem 1rem;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-            margin-left: 0.5rem;
+        
+        .cta-section__title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: var(--space-4);
         }
-        .suggest-btn:hover {
-            background-color: #219653;
+        
+        .cta-section__description {
+            font-size: 1.125rem;
+            max-width: 36rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: var(--space-8);
+            opacity: 0.9;
         }
-        .podcast-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-            justify-content: center;
-            margin: 2rem 0;
-        }
-        .podcast-card {
+        
+        .cta-section__button {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-2);
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 1.5rem;
-            width: 300px;
-            transition: transform 0.3s;
+            color: var(--primary);
+            padding: var(--space-4) var(--space-8);
+            border: none;
+            border-radius: var(--border-radius-full);
+            font-weight: 600;
+            font-size: 1.125rem;
+            cursor: pointer;
+            transition: all var(--transition-normal) var(--easing);
         }
-        .podcast-card:hover {
-            transform: translateY(-5px);
+        
+        .cta-section__button:hover {
+            transform: translateY(-0.25rem);
+            box-shadow: var(--shadow-lg);
         }
-        .podcast-card h3 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
+        
+        /* FOOTER */
+        .footer {
+            background-color: var(--gray-900);
+            color: var(--gray-300);
+            padding: var(--space-16) var(--space-4) var(--space-8);
+            margin-top: auto;
         }
-        .podcast-card p {
-            font-size: 0.9rem;
-            color: #666;
+        
+        .footer__content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+            gap: var(--space-8);
+            margin-bottom: var(--space-10);
         }
-        .podcast-card a {
-            color: #e74c3c;
-            text-decoration: none;
-        }
-        .podcast-card a:hover {
-            text-decoration: underline;
-        }
-        .podcast-card .tags {
-            font-size: 0.8rem;
-            color: #999;
-            margin-top: 0.5rem;
-        }
-        .ad-space {
-            text-align: center;
-            margin: 2rem 0;
-            padding: 1rem;
-            background-color: #eee;
-        }
-        footer {
-            background-color: #2c3e50;
+        
+        .footer__column-title {
+            font-size: 1.25rem;
+            font-weight: 600;
             color: white;
+            margin-bottom: var(--space-6);
+            position: relative;
+        }
+        
+        .footer__column-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.75rem;
+            left: 0;
+            width: 2rem;
+            height: 0.25rem;
+            background-color: var(--primary);
+            border-radius: var(--border-radius-full);
+        }
+        
+        .footer__description {
+            margin-bottom: var(--space-6);
+            font-size: 0.9375rem;
+            max-width: 20rem;
+        }
+        
+        .footer__social {
+            display: flex;
+            gap: var(--space-3);
+        }
+        
+        .footer__social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: var(--border-radius-full);
+            background-color: var(--gray-800);
+            color: white;
+            transition: all var(--transition-normal) var(--easing);
+        }
+        
+        .footer__social-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-0.25rem);
+        }
+        
+        .footer__links {
+            list-style: none;
+        }
+        
+        .footer__link-item {
+            margin-bottom: var(--space-3);
+        }
+        
+        .footer__link {
+            position: relative;
+            display: inline-block;
+            color: var(--gray-400);
+            transition: all var(--transition-fast) var(--easing);
+            padding-left: var(--space-4);
+        }
+        
+        .footer__link::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0.5rem;
+            height: 0.5rem;
+            background-color: var(--primary);
+            border-radius: var(--border-radius-full);
+            opacity: 0.5;
+            transition: all var(--transition-fast) var(--easing);
+        }
+        
+        .footer__link:hover {
+            color: white;
+        }
+        
+        .footer__link:hover::before {
+            opacity: 1;
+        }
+        
+        .footer__copyright {
             text-align: center;
-            padding: 1rem;
-            width: 100%;
+            padding-top: var(--space-8);
+            border-top: 1px solid var(--gray-800);
+            color: var(--gray-500);
+            font-size: 0.875rem;
         }
-        footer a {
-            color: #e74c3c;
-            text-decoration: none;
-            margin: 0 0.5rem;
+        
+        /* UTILS */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
         }
-        footer a:hover {
-            text-decoration: underline;
+        
+        .skeleton {
+            background-color: var(--gray-200);
+            border-radius: var(--border-radius-md);
+            animation: skeleton-loading 1.5s infinite;
         }
+        
+        @keyframes skeleton-loading {
+            0% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.5;
+            }
+        }
+        
+        /* MEDIA QUERIES */
         @media (max-width: 768px) {
-            header h1 { font-size: 1.8rem; }
-            header p { font-size: 1rem; }
-            .podcast-card { width: 100%; }
-            .filter-btn, .sort-btn, .suggest-btn { margin: 0.3rem; }
+            .hero {
+                padding: var(--space-10) var(--space-4);
+            }
+            
+            .filters {
+                border-radius: var(--border-radius-lg);
+            }
+            
+            .filters-container {
+                top: 0.5rem;
+                margin-top: -2rem;
+            }
+            
+            .filter-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .podcast-grid.list-view .podcast-card {
+                flex-direction: column;
+            }
+            
+            .podcast-grid.list-view .podcast-card__content {
+                max-width: 100%;
+            }
+            
+            .cta-section {
+                padding: var(--space-8) var(--space-4);
+            }
+            
+            .cta-section__title {
+                font-size: 1.75rem;
+            }
+            
+            .cta-section__description {
+                font-size: 1rem;
+            }
+            
+            .cta-section__button {
+                padding: var(--space-3) var(--space-6);
+                font-size: 1rem;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .podcast-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .podcast-grid.list-view .podcast-card__content {
+                max-width: 60%;
+            }
+        }
+        
+        /* ANIMATIONS */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(1rem);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s var(--easing) forwards;
+        }
+        
+        /* THEME SWITCH */
+        .theme-switch {
+            position: fixed;
+            bottom: var(--space-4);
+            right: var(--space-4);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            border-radius: var(--border-radius-full);
+            background-color: var(--surface);
+            color: var(--gray-700);
+            box-shadow: var(--shadow-lg);
+            cursor: pointer;
+            transition: all var(--transition-normal) var(--easing);
+        }
+        
+        .theme-switch:hover {
+            transform: translateY(-0.25rem);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .theme-switch i {
+            font-size: 1.25rem;
+            transition: transform var(--transition-normal) var(--easing);
+        }
+        
+        .theme-switch:hover i {
+            transform: rotate(30deg);
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>Jura-Podcasts</h1>
-        <p>Deine zentrale Plattform für juristische Podcasts – sortiert, zusammengefasst und mit Lernhilfen für Studierende und Interessierte.</p>
-    </header>
+<body data-theme="light">
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Jura-Podcasts</h1>
+            <p class="hero__subtitle">Juristisches Wissen packend erklärt. Finde genau die Podcasts, die du für Studium, Examen und Referendariat brauchst – sortiert, zusammengefasst und mit Lernhilfen.</p>
+        </div>
+    </section>
 
-    <div class="container">
-        <div class="controls">
-            <input type="text" class="search-bar" id="searchBar" placeholder="Podcast suchen (z.B. Zivilrecht, True Crime)">
-            <div class="filters">
-                <button class="filter-btn" onclick="filterPods('all')">Alle</button>
-                <button class="filter-btn" onclick="filterPods('zivilrecht')">Zivilrecht</button>
-                <button class="filter-btn" onclick="filterPods('strafrecht')">Strafrecht</button>
-                <button class="filter-btn" onclick="filterPods('oeffentlichesrecht')">Öffentliches Recht</button>
-                <button class="filter-btn" onclick="filterPods('legaltech')">Legal Tech</button>
-                <button class="filter-btn" onclick="filterPods('allgemein')">Allgemein</button>
-                <button class="sort-btn" onclick="sortPodsByRating()">Nach Bewertung sortieren</button>
-                <button class="suggest-btn" onclick="window.open('https://forms.gle/your-google-form-link', '_blank')">Vorschlag einreichen</button>
+    <main class="main">
+        <div class="container">
+            <div class="filters-container" id="filterContainer">
+                <div class="filters" id="filters">
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" id="searchInput" placeholder="Podcast suchen (z.B. Zivilrecht, True Crime, Examen)" aria-label="Podcast suchen">
+                    </div>
+                    
+                    <div class="filter-tabs">
+                        <button class="filter-tab active" data-category="all">Alle Podcasts</button>
+                        <button class="filter-tab filter-zivilrecht" data-category="zivilrecht">Zivilrecht</button>
+                        <button class="filter-tab filter-strafrecht" data-category="strafrecht">Strafrecht</button>
+                        <button class="filter-tab filter-orecht" data-category="oeffentlichesrecht">Öffentliches Recht</button>
+                        <button class="filter-tab filter-legaltech" data-category="legaltech">Legal Tech</button>
+                        <button class="filter-tab filter-allgemein" data-category="allgemein">Allgemein</button>
+                    </div>
+                    
+                    <div class="filter-actions">
+                        <div class="view-toggle" id="viewToggle">
+                            <button class="view-toggle-button active" data-view="grid" aria-label="Rasteransicht">
+                                <i class="fas fa-th"></i>
+                            </button>
+                            <button class="view-toggle-button" data-view="list" aria-label="Listenansicht">
+                                <i class="fas fa-list"></i>
+                            </button>
+                        </div>
+                        
+                        <div>
+                            <button class="action-button sort-button" id="sortButton" data-sort="rating">
+                                <i class="fas fa-sort"></i> Nach Bewertung
+                            </button>
+                            <button class="action-button suggest-button" id="suggestButton">
+                                <i class="fas fa-plus-circle"></i> Podcast vorschlagen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="no-results" id="noResults">
+                <i class="fas fa-podcast no-results__icon"></i>
+                <h3 class="no-results__title">Keine Podcasts gefunden</h3>
+                <p class="no-results__message">Versuche es mit anderen Suchbegriffen oder Filtern.</p>
+                <button class="no-results__button" id="resetButton">
+                    <i class="fas fa-redo"></i> Alle Filter zurücksetzen
+                </button>
+            </div>
+
+            <div class="podcast-layout">
+                <div class="podcast-grid" id="podcastGrid">
+                    <!-- Podcast cards will be generated by JavaScript -->
+                </div>
+            </div>
+
+            <section class="cta-section">
+                <h2 class="cta-section__title">Bereit für dein Examen?</h2>
+                <p class="cta-section__description">Melde dich für unseren Newsletter an und erhalte wöchentlich neue Podcast-Empfehlungen, Lernmaterialien und exklusive Inhalte.</p>
+                <a href="#" class="cta-section__button">
+                    <i class="fas fa-envelope"></i> Newsletter abonnieren
+                </a>
+            </section>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__column">
+                    <h3 class="footer__column-title">Jura-Podcasts</h3>
+                    <p class="footer__description">Deine zentrale Plattform für juristische Podcasts – sortiert, zusammengefasst und mit Lernhilfen für Studierende und Referendare.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__column-title">Rechtsgebiete</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link-item"><a href="#" class="footer__link">Zivilrecht</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Strafrecht</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Öffentliches Recht</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Arbeitsrecht</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Handelsrecht</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__column-title">Ressourcen</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link-item"><a href="#" class="footer__link">Für Anfänger</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Examensvorbereitung</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Lernmaterialien</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Podcast-Verzeichnis</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h3 class="footer__column-title">Kontakt</h3>
+                    <ul class="footer__links">
+                        <li class="footer__link-item"><a href="#" class="footer__link">Über uns</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Team</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Kontakt</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Podcast vorschlagen</a></li>
+                        <li class="footer__link-item"><a href="#" class="footer__link">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer__copyright">
+                <p>&copy; 2025 Jura-Podcasts. Alle Rechte vorbehalten.</p>
             </div>
         </div>
-
-        <section class="podcast-list" id="podcastList">
-            <div class="podcast-card" data-category="zivilrecht" data-rating="4.4">
-                <h3><a href="[Website/Spotify Link]">Recht Aktuell</a></h3>
-                <p>Ein Podcast von Prof. Martin Fries aus München, der sich mit Zivil- und Zivilprozessrecht beschäftigt.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">ZPO Kommentar</a></p>
-                <div class="tags">Tags: Zivilrecht, ZPO, Examen</div>
-            </div>
-            <div class="podcast-card" data-category="allgemein" data-rating="4.5">
-                <h3><a href="[Website/Spotify Link]">Jurability – Rechtsprechung fürs Examen</a></h3>
-                <p>Ein fallorientierter Podcast, der wichtige Examensentscheidungen aus dem Straf- und Zivilrecht bespricht.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Staatsexamen Jura Übungsbuch</a></p>
-                <div class="tags">Tags: Examen, Rechtsprechung</div>
-            </div>
-            <div class="podcast-card" data-category="allgemein" data-rating="4.6">
-                <h3><a href="https://www.alpmann-schmidt.de/podcast">Die Juraflüsterer</a></h3>
-                <p>Der Jura-Podcast von Alpmann Schmidt, der alle zwei Wochen aktuelle Rechtsprechung, Lerntipps und Infos zum Jurastudium bietet.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Alpmann Schmidt Skript BGB</a></p>
-                <div class="tags">Tags: Rechtsprechung, Lerntipps, Examen</div>
-            </div>
-            <div class="podcast-card" data-category="allgemein" data-rating="4.3">
-                <h3><a href="https://www.justiz.nrw/Podcast">Recht verständlich</a></h3>
-                <p>Ein Podcast der Justiz NRW, in dem Julia Jacobs mit Experten über rechtliche Themen aus dem Alltag spricht.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Jura für Dummies</a></p>
-                <div class="tags">Tags: Alltag, Justiz</div>
-            </div>
-            <div class="podcast-card" data-category="strafrecht" data-rating="4.4">
-                <h3><a href="[Website/Spotify Link]">Räuberischer Espresso</a></h3>
-                <p>Ein Podcast der Fachzeitschrift Juristische Arbeitsblätter (JA), der sich mit Fragen des Strafrechts im Alltag befasst.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Strafrecht Kommentar</a></p>
-                <div class="tags">Tags: StGB, Alltag</div>
-            </div>
-            <div class="podcast-card" data-category="allgemein" data-rating="4.5">
-                <h3><a href="https://www.ardmediathek.de/podcast/die-justizreporter-innen">Die Justizreporter*innen</a></h3>
-                <p>Der Jura-Podcast der ARD-Rechtsredaktion, der über wichtige Gerichtsentscheidungen berichtet.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Schönfelder Gesetzestexte</a></p>
-                <div class="tags">Tags: Rechtsprechung, Justiz</div>
-            </div>
-            <div class="podcast-card" data-category="allgemein" data-rating="4.2">
-                <h3><a href="[Website/Spotify Link]">Law Busters</a></h3>
-                <p>Ein Podcast, der Filme und Serien juristisch und humorvoll bespricht.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Recht im Film</a></p>
-                <div class="tags">Tags: Humor, Popkultur</div>
-            </div>
-            <div class="podcast-card" data-category="oeffentlichesrecht" data-rating="4.3">
-                <h3><a href="[Website/Spotify Link]">Und was denkst Du?</a></h3>
-                <p>Ein Podcast, der sich mit verschiedenen Aspekten von Demokratie, Verfassung und Rechtsstaat beschäftigt.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Grundgesetz Kommentar</a></p>
-                <div class="tags">Tags: ÖffRecht, Demokratie</div>
-            </div>
-            <div class="podcast-card" data-category="legaltech" data-rating="4.4">
-                <h3><a href="[Website/Spotify Link]">BRINGE DEINE KANZLEI NACH VORNE!</a></h3>
-                <p>Ein Unternehmerpodcast für Rechtsanwälte und Rechtsanwältinnen von Clemens und Alexandra Pichler.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Kanzleimanagement Handbuch</a></p>
-                <div class="tags">Tags: LegalTech, Anwaltschaft</div>
-            </div>
-            <div class="podcast-card" data-category="allgemein" data-rating="4.3">
-                <h3><a href="https://www.djb.de/podcast">Justitias Töchter</a></h3>
-                <p>Ein Podcast des Deutschen Juristinnenbunds e.V. (djb) zu feministischer Rechtspolitik.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Feministische Jurisprudenz</a></p>
-                <div class="tags">Tags: Rechtspolitik, Feminismus</div>
-            </div>
-            <div class="podcast-card" data-category="legaltech" data-rating="4.5">
-                <h3><a href="https://www.cms-law.com/deu/podcast">CMS To Go</a></h3>
-                <p>Ein Podcast von CMS Deutschland, der rechtliche Themen aus verschiedenen Branchen diskutiert.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Wirtschaftsrecht Einführung</a></p>
-                <div class="tags">Tags: LegalTech, Branchenrecht</div>
-            </div>
-            <div class="podcast-card" data-category="oeffentlichesrecht" data-rating="4.4">
-                <h3><a href="https://www.faz.net/podcasts/f-a-z-einspruch-podcast">F.A.Z. Einspruch</a></h3>
-                <p>Der wohl bekannteste juristische Podcast in Deutschland mit 4,4 Sternen auf Spotify. Wöchentlich moderiert von Corinna Budras, Marlene Grunert und Constantin van Lijnden zu Recht, Justiz und Politik.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Grundgesetz Kommentar</a></p>
-                <div class="tags">Tags: ÖffRecht, Justiz, Politik</div>
-            </div>
-            <div class="podcast-card" data-category="oeffentlichesrecht" data-rating="4.9">
-                <h3><a href="https://lagedernation.de">Lage der Nation</a></h3>
-                <p>Ein politischer Podcast mit starkem juristischen Fokus von Philip Banse und Richter Ulf Buermeyer, beeindruckende 4,9 Sterne auf Spotify.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Verfassungsrecht Skript</a></p>
-                <div class="tags">Tags: ÖffRecht, Politik, Examen</div>
-            </div>
-            <div class="podcast-card" data-category="strafrecht" data-rating="4.5">
-                <h3><a href="https://www.zeit.de/serie/verbrechen">Verbrechen (Zeit)</a></h3>
-                <p>Ein beliebter True Crime-Podcast, der auch unter Juristen große Reichweite genießt.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Schönfelder Gesetzestexte</a></p>
-                <div class="tags">Tags: StGB, TrueCrime, Justiz</div>
-            </div>
-            <div class="podcast-card" data-category="legaltech" data-rating="4.8">
-                <h3><a href="[Spotify/Website Link]">Talking Legal Tech</a></h3>
-                <p>Mit 4,8 Sternen auf Spotify ein führender Podcast zur Digitalisierung im Rechtsbereich.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Legal Tech Grundlagen</a></p>
-                <div class="tags">Tags: LegalTech, Digitalisierung</div>
-            </div>
-            <div class="podcast-card" data-category="strafrecht" data-rating="4.6">
-                <h3><a href="https://www.swr.de/swrkultur/sprechen-wir-ueber-mord">Sprechen wir über Mord?!</a></h3>
-                <p>Ein True Crime-Podcast von SWR Kultur mit dem ehemaligen Bundesrichter Thomas Fischer.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Strafrecht Kommentar</a></p>
-                <div class="tags">Tags: StGB, TrueCrime, Examen</div>
-            </div>
-            <div class="podcast-card" data-category="allgemein" data-rating="4.3">
-                <h3><a href="https://www.lto.de/podcast">Die Rechtslage (LTO)</a></h3>
-                <p>Ein Podcast von Legal Tribune Online zu aktueller Rechtsprechung.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Jura für Dummies</a></p>
-                <div class="tags">Tags: Rechtsprechung, Allgemein</div>
-            </div>
-            <div class="podcast-card" data-category="allgemein" data-rating="4.6">
-                <h3><a href="[Spotify Link]">Jura To Go</a></h3>
-                <p>Ein beliebter Podcast mit 4,6 Sternen auf Spotify, der juristische Fälle kompakt erklärt.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Staatsexamen Jura Übungsbuch</a></p>
-                <div class="tags">Tags: Examen, Allgemein</div>
-            </div>
-            <div class="podcast-card" data-category="allgemein" data-rating="4.4">
-                <h3><a href="https://www.beck-aktuell.de/podcast">Gerechtigkeit & Loseblatt</a></h3>
-                <p>Der Podcast von NJW und beck-aktuell zur Woche im Recht.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">NJW Jahresabo</a></p>
-                <div class="tags">Tags: Rechtspolitik, Allgemein</div>
-            </div>
-            <div class="podcast-card" data-category="allgemein" data-rating="4.7">
-                <h3><a href="https://podcast.jurafuchs.de">Spruchreif (Jurafuchs)</a></h3>
-                <p>Ein Podcast mit über 250 Stunden Expertenwissen zu Rechtsfragen.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Jurafuchs Lernkarten</a></p>
-                <div class="tags">Tags: Examen, Rechtsprechung</div>
-            </div>
-            <div class="podcast-card" data-category="allgemein" data-rating="4.2">
-                <h3><a href="https://www.anwaltverein.de/podcast">zuRechtgehört!</a></h3>
-                <p>Der Podcast des Deutschen Anwaltvereins (DAV).</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Anwaltspraxis Handbuch</a></p>
-                <div class="tags">Tags: Anwaltschaft, Allgemein</div>
-            </div>
-            <div class="podcast-card" data-category="zivilrecht" data-rating="4.5">
-                <h3><a href="https://jurafunk.de">Jurafunk</a></h3>
-                <p>Ein Podcast über Zivilrecht und Examensvorbereitung mit praxisnahen Tipps.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Palandt BGB</a></p>
-                <div class="tags">Tags: BGB, Klausurtipps</div>
-            </div>
-            <div class="podcast-card" data-category="strafrecht" data-rating="4.4">
-                <h3><a href="https://rechtsprechungspodcast.de">Rechtsprechungs-Podcast</a></h3>
-                <p>Diskussionen zu aktuellen Strafrechtsfällen – ideal für Profis und Studierende.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Schönfelder Gesetzestexte</a></p>
-                <div class="tags">Tags: StGB, Examen</div>
-            </div>
-            <div class="podcast-card" data-category="oeffentlichesrecht" data-rating="4.3">
-                <h3><a href="https://verfassungsblog.de/podcast">Verfassungsblog Podcast</a></h3>
-                <p>Verfassungsrecht und Verwaltungsrecht, leicht verständlich erklärt.</p>
-                <p>Empfohlen: <a href="[Amazon Affiliate Link]">Grundgesetz Kommentar</a></p>
-                <div class="tags">Tags: ÖffRecht, Beginner</div>
-            </div>
-        </section>
-
-        <div class="ad-space">
-            <!-- Google Ads Placeholder -->
-            <p>[Google AdSense Code Here]</p>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2025 Jura-Podcasts. Alle Rechte vorbehalten. | <a href="[Impressum URL]">Impressum</a> | <a href="[Datenschutz URL]">Datenschutz</a></p>
     </footer>
+    
+    <button class="theme-switch" id="themeSwitch" aria-label="Farbschema wechseln">
+        <i class="fas fa-moon"></i>
+    </button>
 
     <script>
-        // Filter by category
-        function filterPods(category) {
+        // Generate star rating HTML based on rating value
+        function getStarRating(rating) {
+            let stars = '';
+            const fullStars = Math.floor(rating);
+            const halfStar = rating % 1 >= 0.5;
+            
+            for (let i = 1; i <= 5; i++) {
+                if (i <= fullStars) {
+                    stars += '<i class="fas fa-star"></i>';
+                } else if (i === fullStars + 1 && halfStar) {
+                    stars += '<i class="fas fa-star-half-alt"></i>';
+                } else {
+                    stars += '<i class="far fa-star"></i>';
+                }
+            }
+            
+            return stars;
+        }
+
+        // Get readable category name
+        function getCategoryName(category) {
+            const categories = {
+                'zivilrecht': 'Zivilrecht',
+                'strafrecht': 'Strafrecht',
+                'oeffentlichesrecht': 'Öffentliches Recht',
+                'legaltech': 'Legal Tech',
+                'allgemein': 'Allgemein'
+            };
+            
+            return categories[category] || category;
+        }
+        
+        // Create podcast cards from data
+        function createPodcastCards(podcasts) {
+            const grid = document.getElementById('podcastGrid');
+            grid.innerHTML = '';
+            
+            podcasts.forEach((podcast, index) => {
+                const card = document.createElement('article');
+                card.className = `podcast-card ${podcast.category} fade-in`;
+                card.setAttribute('data-category', podcast.category);
+                card.setAttribute('data-rating', podcast.rating);
+                card.style.animationDelay = `${index * 0.05}s`;
+                
+                // Create tags HTML
+                const tagsHtml = podcast.tags.map(tag => 
+                    `<span class="podcast-card__tag">${tag}</span>`
+                ).join('');
+                
+                card.innerHTML = `
+                    <div class="podcast-card__color-tag"></div>
+                    <span class="podcast-card__category">${getCategoryName(podcast.category)}</span>
+                    <div class="podcast-card__content">
+                        <h3 class="podcast-card__title">
+                            <a href="${podcast.link}" target="_blank">${podcast.title}</a>
+                        </h3>
+                        <div class="podcast-card__rating">
+                            <div class="podcast-card__stars">${getStarRating(podcast.rating)}</div>
+                            <span class="podcast-card__rating-text">${podcast.rating.toFixed(1)}</span>
+                        </div>
+                        <p class="podcast-card__description">${podcast.description}</p>
+                        <div class="podcast-card__recommendation">
+                            <i class="fas fa-book"></i>
+                            <span>Empfohlen: <a href="${podcast.recommendLink}" target="_blank">${podcast.recommend}</a></span>
+                        </div>
+                    </div>
+                    <div class="podcast-card__tags">${tagsHtml}</div>
+                `;
+                
+                grid.appendChild(card);
+            });
+            
+            checkNoResults();
+        }
+        
+        // Filter podcasts by category
+        function filterPodcasts(category) {
             const cards = document.querySelectorAll('.podcast-card');
+            let visibleCount = 0;
+            
             cards.forEach(card => {
-                const matchesCategory = category === 'all' || card.getAttribute('data-category') === category;
-                const matchesSearch = card.style.display !== 'none';
-                if (matchesCategory && matchesSearch) {
-                    card.style.display = 'block';
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = '';
+                    visibleCount++;
                 } else {
                     card.style.display = 'none';
                 }
             });
+            
+            // Update filter tab states
+            document.querySelectorAll('.filter-tab').forEach(tab => {
+                if (tab.getAttribute('data-category') === category) {
+                    tab.classList.add('active');
+                } else {
+                    tab.classList.remove('active');
+                }
+            });
+            
+            checkNoResults();
+            return visibleCount;
         }
-
-        // Search functionality
-        const searchBar = document.getElementById('searchBar');
-        searchBar.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
+        
+        // Sort podcasts by specified criteria
+        function sortPodcasts(sortCriteria) {
+            const grid = document.getElementById('podcastGrid');
+            const sortButton = document.getElementById('sortButton');
+            const isAscending = sortButton.getAttribute('data-order') === 'asc';
+            const cards = Array.from(grid.querySelectorAll('.podcast-card'));
+            
+            // Toggle sort order
+            if (isAscending) {
+                sortButton.innerHTML = '<i class="fas fa-sort-amount-down"></i> Höchste Bewertung';
+                sortButton.setAttribute('data-order', 'desc');
+                
+                cards.sort((a, b) => {
+                    return parseFloat(b.getAttribute('data-rating')) - parseFloat(a.getAttribute('data-rating'));
+                });
+            } else {
+                sortButton.innerHTML = '<i class="fas fa-sort-amount-up"></i> Niedrigste Bewertung';
+                sortButton.setAttribute('data-order', 'asc');
+                
+                cards.sort((a, b) => {
+                    return parseFloat(a.getAttribute('data-rating')) - parseFloat(b.getAttribute('data-rating'));
+                });
+            }
+            
+            // Add animation when sorting
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.05}s`;
+                card.classList.remove('fade-in');
+                void card.offsetWidth; // Force reflow
+                card.classList.add('fade-in');
+                grid.appendChild(card);
+            });
+        }
+        
+        // Search podcasts by query
+        function searchPodcasts(query) {
             const cards = document.querySelectorAll('.podcast-card');
+            let visibleCount = 0;
+            
             cards.forEach(card => {
                 const text = card.textContent.toLowerCase();
-                if (text.includes(searchTerm)) {
-                    card.style.display = 'block';
+                const matches = text.includes(query.toLowerCase());
+                
+                // Only consider category filter if card matches search
+                if (matches) {
+                    const activeCategory = document.querySelector('.filter-tab.active').getAttribute('data-category');
+                    if (activeCategory === 'all' || card.getAttribute('data-category') === activeCategory) {
+                        card.style.display = '';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
                 } else {
                     card.style.display = 'none';
+                }
+            });
+            
+            checkNoResults();
+            return visibleCount;
+        }
+        
+        // Check if no results should be shown
+        function checkNoResults() {
+            const visibleCards = document.querySelectorAll('.podcast-card[style=""]').length + 
+                               document.querySelectorAll('.podcast-card:not([style])').length;
+            const noResults = document.getElementById('noResults');
+            
+            if (visibleCards === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+        
+        // Reset all filters and search
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            filterPodcasts('all');
+            
+            const sortButton = document.getElementById('sortButton');
+            sortButton.innerHTML = '<i class="fas fa-sort"></i> Nach Bewertung';
+            sortButton.setAttribute('data-order', '');
+            
+            // Re-create podcast cards to reset order
+            createPodcastCards(podcastData);
+        }
+        
+        // Toggle view mode (grid/list)
+        function toggleView(viewMode) {
+            const grid = document.getElementById('podcastGrid');
+            const viewButtons = document.querySelectorAll('.view-toggle-button');
+            
+            // Update view toggle buttons
+            viewButtons.forEach(button => {
+                if (button.getAttribute('data-view') === viewMode) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+            
+            // Update grid class
+            if (viewMode === 'list') {
+                grid.classList.add('list-view');
+            } else {
+                grid.classList.remove('list-view');
+            }
+        }
+        
+        // Toggle dark/light theme
+        function toggleTheme() {
+            const body = document.body;
+            const themeSwitch = document.getElementById('themeSwitch');
+            const isDarkTheme = body.getAttribute('data-theme') === 'dark';
+            
+            if (isDarkTheme) {
+                body.setAttribute('data-theme', 'light');
+                themeSwitch.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                body.setAttribute('data-theme', 'dark');
+                themeSwitch.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        }
+        
+        // Podcast data array
+        const podcastData = [
+            {
+                title: "Recht Aktuell",
+                link: "#",
+                description: "Ein Podcast von Prof. Martin Fries aus München, der sich mit Zivil- und Zivilprozessrecht beschäftigt.",
+                category: "zivilrecht",
+                rating: 4.4,
+                recommend: "ZPO Kommentar",
+                recommendLink: "#",
+                tags: ["Zivilrecht", "ZPO", "Examen"]
+            },
+            {
+                title: "Jurability – Rechtsprechung fürs Examen",
+                link: "#",
+                description: "Ein fallorientierter Podcast, der wichtige Examensentscheidungen aus dem Straf- und Zivilrecht bespricht.",
+                category: "allgemein",
+                rating: 4.5,
+                recommend: "Staatsexamen Jura Übungsbuch",
+                recommendLink: "#",
+                tags: ["Examen", "Rechtsprechung"]
+            },
+            {
+                title: "Die Juraflüsterer",
+                link: "https://www.alpmann-schmidt.de/podcast",
+                description: "Der Jura-Podcast von Alpmann Schmidt, der alle zwei Wochen aktuelle Rechtsprechung, Lerntipps und Infos zum Jurastudium bietet.",
+                category: "allgemein",
+                rating: 4.6,
+                recommend: "Alpmann Schmidt Skript BGB",
+                recommendLink: "#",
+                tags: ["Rechtsprechung", "Lerntipps", "Examen"]
+            },
+            {
+                title: "Recht verständlich",
+                link: "https://www.justiz.nrw/Podcast",
+                description: "Ein Podcast der Justiz NRW, in dem Julia Jacobs mit Experten über rechtliche Themen aus dem Alltag spricht.",
+                category: "allgemein",
+                rating: 4.3,
+                recommend: "Jura für Dummies",
+                recommendLink: "#",
+                tags: ["Alltag", "Justiz"]
+            },
+            {
+                title: "Räuberischer Espresso",
+                link: "#",
+                description: "Ein Podcast der Fachzeitschrift Juristische Arbeitsblätter (JA), der sich mit Fragen des Strafrechts im Alltag befasst.",
+                category: "strafrecht",
+                rating: 4.4,
+                recommend: "Strafrecht Kommentar",
+                recommendLink: "#",
+                tags: ["StGB", "Alltag"]
+            },
+            {
+                title: "Die Justizreporter*innen",
+                link: "https://www.ardmediathek.de/podcast/die-justizreporter-innen",
+                description: "Der Jura-Podcast der ARD-Rechtsredaktion, der über wichtige Gerichtsentscheidungen berichtet.",
+                category: "allgemein",
+                rating: 4.5,
+                recommend: "Schönfelder Gesetzestexte",
+                recommendLink: "#",
+                tags: ["Rechtsprechung", "Justiz"]
+            },
+            {
+                title: "Law Busters",
+                link: "#",
+                description: "Ein Podcast, der Filme und Serien juristisch und humorvoll bespricht.",
+                category: "allgemein",
+                rating: 4.2,
+                recommend: "Recht im Film",
+                recommendLink: "#",
+                tags: ["Humor", "Popkultur"]
+            },
+            {
+                title: "Und was denkst Du?",
+                link: "#",
+                description: "Ein Podcast, der sich mit verschiedenen Aspekten von Demokratie, Verfassung und Rechtsstaat beschäftigt.",
+                category: "oeffentlichesrecht",
+                rating: 4.3,
+                recommend: "Grundgesetz Kommentar",
+                recommendLink: "#",
+                tags: ["ÖffRecht", "Demokratie"]
+            },
+            {
+                title: "BRINGE DEINE KANZLEI NACH VORNE!",
+                link: "#",
+                description: "Ein Unternehmerpodcast für Rechtsanwälte und Rechtsanwältinnen von Clemens und Alexandra Pichler.",
+                category: "legaltech",
+                rating: 4.4,
+                recommend: "Kanzleimanagement Handbuch",
+                recommendLink: "#",
+                tags: ["LegalTech", "Anwaltschaft"]
+            },
+            {
+                title: "Justitias Töchter",
+                link: "https://www.djb.de/podcast",
+                description: "Ein Podcast des Deutschen Juristinnenbunds e.V. (djb) zu feministischer Rechtspolitik.",
+                category: "allgemein",
+                rating: 4.3,
+                recommend: "Feministische Jurisprudenz",
+                recommendLink: "#",
+                tags: ["Rechtspolitik", "Feminismus"]
+            },
+            {
+                title: "CMS To Go",
+                link: "https://www.cms-law.com/deu/podcast",
+                description: "Ein Podcast von CMS Deutschland, der rechtliche Themen aus verschiedenen Branchen diskutiert.",
+                category: "legaltech",
+                rating: 4.5,
+                recommend: "Wirtschaftsrecht Einführung",
+                recommendLink: "#",
+                tags: ["LegalTech", "Branchenrecht"]
+            },
+            {
+                title: "F.A.Z. Einspruch",
+                link: "https://www.faz.net/podcasts/f-a-z-einspruch-podcast",
+                description: "Der wohl bekannteste juristische Podcast in Deutschland mit 4,4 Sternen auf Spotify. Wöchentlich moderiert von Corinna Budras, Marlene Grunert und Constantin van Lijnden zu Recht, Justiz und Politik.",
+                category: "oeffentlichesrecht",
+                rating: 4.4,
+                recommend: "Grundgesetz Kommentar",
+                recommendLink: "#",
+                tags: ["ÖffRecht", "Justiz", "Politik"]
+            },
+            {
+                title: "Lage der Nation",
+                link: "https://lagedernation.de",
+                description: "Ein politischer Podcast mit starkem juristischen Fokus von Philip Banse und Richter Ulf Buermeyer, beeindruckende 4,9 Sterne auf Spotify.",
+                category: "oeffentlichesrecht",
+                rating: 4.9,
+                recommend: "Verfassungsrecht Skript",
+                recommendLink: "#",
+                tags: ["ÖffRecht", "Politik", "Examen"]
+            },
+            {
+                title: "Verbrechen (Zeit)",
+                link: "https://www.zeit.de/serie/verbrechen",
+                description: "Ein beliebter True Crime-Podcast, der auch unter Juristen große Reichweite genießt.",
+                category: "strafrecht",
+                rating: 4.5,
+                recommend: "Schönfelder Gesetzestexte",
+                recommendLink: "#",
+                tags: ["StGB", "TrueCrime", "Justiz"]
+            },
+            {
+                title: "Talking Legal Tech",
+                link: "#",
+                description: "Mit 4,8 Sternen auf Spotify ein führender Podcast zur Digitalisierung im Rechtsbereich.",
+                category: "legaltech",
+                rating: 4.8,
+                recommend: "Legal Tech Grundlagen",
+                recommendLink: "#",
+                tags: ["LegalTech", "Digitalisierung"]
+            },
+            {
+                title: "Sprechen wir über Mord?!",
+                link: "https://www.swr.de/swrkultur/sprechen-wir-ueber-mord",
+                description: "Ein True Crime-Podcast von SWR Kultur mit dem ehemaligen Bundesrichter Thomas Fischer.",
+                category: "strafrecht",
+                rating: 4.6,
+                recommend: "Strafrecht Kommentar",
+                recommendLink: "#",
+                tags: ["StGB", "TrueCrime", "Examen"]
+            },
+            {
+                title: "Die Rechtslage (LTO)",
+                link: "https://www.lto.de/podcast",
+                description: "Ein Podcast von Legal Tribune Online zu aktueller Rechtsprechung.",
+                category: "allgemein",
+                rating: 4.3,
+                recommend: "Jura für Dummies",
+                recommendLink: "#",
+                tags: ["Rechtsprechung", "Allgemein"]
+            },
+            {
+                title: "Jura To Go",
+                link: "#",
+                description: "Ein beliebter Podcast mit 4,6 Sternen auf Spotify, der juristische Fälle kompakt erklärt.",
+                category: "allgemein",
+                rating: 4.6,
+                recommend: "Staatsexamen Jura Übungsbuch",
+                recommendLink: "#",
+                tags: ["Examen", "Allgemein"]
+            },
+            {
+                title: "Gerechtigkeit & Loseblatt",
+                link: "https://www.beck-aktuell.de/podcast",
+                description: "Der Podcast von NJW und beck-aktuell zur Woche im Recht.",
+                category: "allgemein",
+                rating: 4.4,
+                recommend: "NJW Jahresabo",
+                recommendLink: "#",
+                tags: ["Rechtspolitik", "Allgemein"]
+            },
+            {
+                title: "Spruchreif (Jurafuchs)",
+                link: "https://podcast.jurafuchs.de",
+                description: "Ein Podcast mit über 250 Stunden Expertenwissen zu Rechtsfragen.",
+                category: "allgemein",
+                rating: 4.7,
+                recommend: "Jurafuchs Lernkarten",
+                recommendLink: "#",
+                tags: ["Examen", "Rechtsprechung"]
+            },
+            {
+                title: "zuRechtgehört!",
+                link: "https://www.anwaltverein.de/podcast",
+                description: "Der Podcast des Deutschen Anwaltvereins (DAV).",
+                category: "allgemein",
+                rating: 4.2,
+                recommend: "Anwaltspraxis Handbuch",
+                recommendLink: "#",
+                tags: ["Anwaltschaft", "Allgemein"]
+            },
+            {
+                title: "Jurafunk",
+                link: "https://jurafunk.de",
+                description: "Ein Podcast über Zivilrecht und Examensvorbereitung mit praxisnahen Tipps.",
+                category: "zivilrecht",
+                rating: 4.5,
+                recommend: "Palandt BGB",
+                recommendLink: "#",
+                tags: ["BGB", "Klausurtipps"]
+            },
+            {
+                title: "Rechtsprechungs-Podcast",
+                link: "https://rechtsprechungspodcast.de",
+                description: "Diskussionen zu aktuellen Strafrechtsfällen – ideal für Profis und Studierende.",
+                category: "strafrecht",
+                rating: 4.4,
+                recommend: "Schönfelder Gesetzestexte",
+                recommendLink: "#",
+                tags: ["StGB", "Examen"]
+            },
+            {
+                title: "Verfassungsblog Podcast",
+                link: "https://verfassungsblog.de/podcast",
+                description: "Verfassungsrecht und Verwaltungsrecht, leicht verständlich erklärt.",
+                category: "oeffentlichesrecht",
+                rating: 4.3,
+                recommend: "Grundgesetz Kommentar",
+                recommendLink: "#",
+                tags: ["ÖffRecht", "Beginner"]
+            }
+        ];
+        
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create initial podcast cards
+            createPodcastCards(podcastData);
+            
+            // Set up filter tabs
+            document.querySelectorAll('.filter-tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    filterPodcasts(this.getAttribute('data-category'));
+                });
+            });
+            
+            // Set up search
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', function() {
+                searchPodcasts(this.value);
+            });
+            
+            // Set up sort button
+            document.getElementById('sortButton').addEventListener('click', function() {
+                sortPodcasts('rating');
+            });
+            
+            // Set up view toggle
+            document.querySelectorAll('.view-toggle-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    toggleView(this.getAttribute('data-view'));
+                });
+            });
+            
+            // Set up reset button
+            document.getElementById('resetButton').addEventListener('click', resetFilters);
+            
+            // Set up suggest button
+            document.getElementById('suggestButton').addEventListener('click', function() {
+                window.open('https://forms.gle/YourGoogleFormLink', '_blank');
+            });
+            
+            // Set up theme switch
+            document.getElementById('themeSwitch').addEventListener('click', toggleTheme);
+            
+            // Handle scroll to condense filters
+            window.addEventListener('scroll', function() {
+                const filtersContainer = document.getElementById('filterContainer');
+                const filters = document.getElementById('filters');
+                
+                if (window.scrollY > 100) {
+                    filters.classList.add('filters--condensed');
+                } else {
+                    filters.classList.remove('filters--condensed');
                 }
             });
         });
-
-        // Sort by rating
-        function sortPodsByRating() {
-            const list = document.getElementById('podcastList');
-            const cards = Array.from(list.querySelectorAll('.podcast-card'));
-            cards.sort((a, b) => {
-                const ratingA = parseFloat(a.getAttribute('data-rating')) || 0;
-                const ratingB = parseFloat(b.getAttribute('data-rating')) || 0;
-                return ratingB - ratingA;
-            });
-            cards.forEach(card => list.appendChild(card));
-        }
-
-        // Suggestion button with pop-up
-        function suggestPodcast() {
-            window.open('https://forms.gle/your-google-form-link', '_blank');
-            alert('Danke für deinen Vorschlag!');
-        }
     </script>
 </body>
 </html>
