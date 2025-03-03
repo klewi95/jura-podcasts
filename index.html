@@ -1258,13 +1258,27 @@
             return visibleCount;
         }
         
-        // Check if no results should be shown
+
+                // Verbesserte Funktion zum Prüfen, ob Ergebnisse vorhanden sind
         function checkNoResults() {
-            const visibleCards = document.querySelectorAll('.podcast-card[style=""]').length + 
-                               document.querySelectorAll('.podcast-card:not([style])').length;
-            const noResults = document.getElementById('noResults');
-            
-            noResults.style.display = visibleCards === 0 ? 'block' : 'none';
+            // Warte einen kurzen Moment, bis die Karten gerendert sind
+            setTimeout(() => {
+                // Zähle alle sichtbaren Karten
+                const visibleCards = Array.from(document.querySelectorAll('.podcast-card')).filter(card => {
+                    // Prüfe, ob die Karte sichtbar ist (nicht display:none)
+                    const style = window.getComputedStyle(card);
+                    return style.display !== 'none';
+                }).length;
+                
+                const noResults = document.getElementById('noResults');
+                
+                // Zeige "Keine Ergebnisse" nur, wenn wirklich keine Karten sichtbar sind
+                if (visibleCards === 0) {
+                    noResults.style.display = 'block';
+                } else {
+                    noResults.style.display = 'none';
+                }
+            }, 100); // Kurze Verzögerung, um sicherzustellen, dass DOM aktualisiert ist
         }
         
         // Reset all filters and search
