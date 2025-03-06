@@ -1,6 +1,6 @@
 [
     {
-        "title": "#fussnote",
+        "title": "Recht Aktuell",
         "link": "#",
         "description": "Ein Podcast von Prof. Martin Fries aus München, der sich mit Zivil- und Zivilprozessrecht beschäftigt.",
         "category": "zivilrecht",
@@ -260,7 +260,7 @@
         "recommend": "Palandt BGB",
         "recommendLink": "#",
         "tags": ["BGB", "Klausurtipps"],
-        "spotifyLink": "hhttps://open.spotify.com/show/1tX0TinMwqgCisE9Nr4NTL?si=1786fbb18fed4ad8",
+        "spotifyLink": "https://open.spotify.com/show/1tX0TinMwqgCisE9Nr4NTL?si=1786fbb18fed4ad8",
         "appleLink": "https://podcasts.apple.com/de/podcast/jurafunk-de-und-juristenfunk-de/id271586007"
     },
     {
@@ -288,172 +288,160 @@
         "appleLink": "https://podcasts.apple.com/de/podcast/example1"
     },
     {
-        "title": "Recht Aktuell",
-        "link": "https://www.uni-speyer.de/",
-        "description": "Die juristische Wochenschau der Universität Speyer mit Sebastian Baur und Ann-Kathrin Hofmann. Jeden Freitag um 12 Uhr.",
-        "category": "allgemein",
-        "rating": null,
-        "recommend": null,
-        "recommendLink": null,
-        "tags": ["Rechtsprechung", "Juristische Praxis", "Examensvorbereitung", "Universität Speyer", "Wochenrückblick"],
-        "spotifyLink": null,
-        "appleLink": null
-    },
-    {
         "title": "Kurzerklärt - Der Jurapodcast",
-        "link": null,
+        "link": "#",
         "description": "Ein Lern-Podcast für das Jurastudium und Referendariat.",
         "category": "allgemein",
-        "rating": null,
-        "recommend": null,
-        "recommendLink": null,
+        "rating": 4.0,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Jurastudium", "Referendariat", "Lernen", "Ausbildung"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "Urteile der Woche von MDR AKTUELL",
         "link": "https://www.mdr.de/nachrichten/ratgeber/recht/index.html",
         "description": "Ein Podcast von MDR AKTUELL, der wöchentlich wichtige Gerichtsurteile zusammenfasst, die für Verbraucher relevant sind.",
         "category": "allgemein",
-        "rating": null,
-        "recommend": null,
-        "recommendLink": null,
+        "rating": 4.0,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Gerichtsurteile", "Verbraucherrecht", "Alltag", "MDR AKTUELL"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "WBS.LEGAL",
         "link": "https://www.wbs.legal/",
         "description": "Ein Podcast mit aktueller Rechtsprechung aus dem Internetrecht, Berichten über neueste Gesetze und Tipps bei Abmahnungen.",
         "category": "legaltech",
-        "rating": null,
-        "recommend": null,
-        "recommendLink": null,
+        "rating": 4.0,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Internetrecht", "Rechtsprechung", "Gesetze", "Abmahnungen", "Christian Solmecke"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "Irgendwas mit Recht | Vorbilder, Karrieren & Jobs im Jura-Podcast",
-        "link": null,
+        "link": "#",
         "description": "Ein Podcast, der spannende Persönlichkeiten im Rechtsmarkt vorstellt und Tipps zur Examensvorbereitung, Bewerbung und Karriere im Jura-Bereich gibt.",
         "category": "allgemein",
-        "rating": null,
-        "recommend": null,
-        "recommendLink": null,
+        "rating": 4.0,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Jura", "Karriere", "Examensvorbereitung", "Bewerbung", "Rechtsmarkt"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "10 Minuten Jura",
-        "link": null,
+        "link": "#",
         "description": "Aktuelle Rechtsfragen, Tipps zu Jura-Lernstrategien und Klausurtaktik von Rechtsanwalt Frank Hofmann, Repetitor und Anwalt für Prüfungsrecht, kurz und bündig in 10 Minuten!",
         "category": "allgemein",
         "rating": 4.9,
-        "recommend": null,
-        "recommendLink": null,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Jurastudium", "Lerntipps", "Klausurtaktik", "Prüfungsrecht", "Repetitorium"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "pwc steuern + recht - aktuelle Steuernachrichten für Unternehmen",
-        "link": null,
+        "link": "#",
         "description": "Ein Podcast von PwC, der aktuelle Steuernachrichten für Unternehmen präsentiert und Informationen zu Steuerthemen, Wachstumsmärkten und EuGH-Urteilen bietet.",
         "category": "steuerrecht",
         "rating": 4.5,
-        "recommend": null,
-        "recommendLink": null,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Steuerrecht", "Unternehmen", "Steuernachrichten", "EuGH", "PwC"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "Der Rechtsstaat",
-        "link": null,
+        "link": "#",
         "description": "Ein Podcast von Kontrafunk, der sich mit Zweifeln an der rechtsstaatlichen Funktionsweise der Justiz auseinandersetzt und Gerichtsverfahren und Urteile mit Juristen thematisiert.",
         "category": "allgemein",
         "rating": 4.2,
-        "recommend": null,
-        "recommendLink": null,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Rechtsstaat", "Justiz", "Gerichtsverfahren", "Urteile", "Kontrafunk"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "Arbeitsrecht einfach erklärt - Rechtsanwalt Andreas Martin",
-        "link": null,
+        "link": "#",
         "description": "Ein Podcast, der das deutsche Arbeitsrecht verständlich erklärt und von interessanten Begebenheiten vor Gericht berichtet.",
         "category": "arbeitsrecht",
         "rating": 4.6,
-        "recommend": null,
-        "recommendLink": null,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Arbeitsrecht", "Abfindung", "Zeitarbeit", "Gericht"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "Der Jura Podcast - Das Studium",
-        "link": null,
+        "link": "#",
         "description": "Ein Podcast von Pascal Kühnl, der einen Einblick in das Jurastudium an der Universität zu Köln gibt.",
         "category": "allgemein",
         "rating": 4.7,
-        "recommend": null,
-        "recommendLink": null,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Jurastudium", "Universität Köln", "Einblicke", "Lerntipps"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "Einfall im Recht 💡",
-        "link": null,
+        "link": "#",
         "description": "Ein Jura-Podcast der Heinrich-Heine-Universität Düsseldorf, der Gerichtsurteile aus dem Zivilrecht präsentiert.",
         "category": "zivilrecht",
         "rating": 4.9,
-        "recommend": null,
-        "recommendLink": null,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Zivilrecht", "Gerichtsurteile", "Universität Düsseldorf", "Alltag"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "Vorlesung Sachenrecht",
-        "link": null,
+        "link": "#",
         "description": "Examensrelevantes Wissen zum Dritten Buch des BGB.",
         "category": "zivilrecht",
         "rating": 5.0,
-        "recommend": null,
-        "recommendLink": null,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Sachenrecht", "BGB", "Zivilrecht", "Examen"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "Rechtsphilosophie",
-        "link": null,
+        "link": "#",
         "description": "Ein Podcast des Lehrstuhls für Strafrecht, Strafprozessrecht und Rechtsphilosophie.",
         "category": "strafrecht",
         "rating": 4.6,
-        "recommend": null,
-        "recommendLink": null,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Rechtsphilosophie", "Strafrecht", "Strafprozessrecht", "Viadrina"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "lex'talk about tax - Der Kanzlei Podcast",
-        "link": null,
+        "link": "#",
         "description": "Ein Podcast von Lexware, der sich mit neuen Arbeitsfeldern für Steuerberater, digitalen Technologien und effizienter Zusammenarbeit zwischen Kanzleien und Mandanten beschäftigt.",
         "category": "legaltech",
         "rating": 5.0,
-        "recommend": null,
-        "recommendLink": null,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["LegalTech", "Steuerrecht", "Digitalisierung", "Kanzleimanagement"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "Der Weg zum erfolgreichen Rechtsanwalt",
@@ -464,8 +452,8 @@
         "recommend": "100 Hacks für deine unverschämt erfolgreiche Anwaltskanzlei",
         "recommendLink": "https://pichler-management.com/bootcamp/",
         "tags": ["LegalTech", "Anwaltschaft", "Kanzleimanagement", "Unternehmertum"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "Völkerrechtspodcast",
@@ -473,35 +461,35 @@
         "description": "Völkerrecht to go, von den Redaktionsmitgliedern des Völkerrechtsblogs: Ob Interventionsverbot, Menschenrechte oder Corona-Impfstoffverteilung - wir kommen mit denen ins Gespräch, die über Völkerrecht nachdenken.",
         "category": "oeffentlichesrecht",
         "rating": 4.9,
-        "recommend": null,
-        "recommendLink": null,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Völkerrecht", "Menschenrechte", "Internationales Recht", "Politik"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "In guter Verfassung - Das Grundgesetz für morgen",
-        "link": null,
+        "link": "#",
         "description": "In der ersten Staffel des Grundgesetz-Podcasts haben Rabea Schloz und Hajo Schumacher das Grundgesetz erklärt und mit Verfassungsexperten darüber gesprochen.",
         "category": "oeffentlichesrecht",
         "rating": 4.7,
-        "recommend": null,
-        "recommendLink": null,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Grundgesetz", "ÖffRecht", "Verfassung", "Politik"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "Verfassungsgeschichte der Neuzeit",
-        "link": null,
+        "link": "#",
         "description": "Ein Podcast für alle, die sich für Verfassungsgeschichte interessieren - also nicht nur für Studierende der Universität Göttingen!",
         "category": "oeffentlichesrecht",
         "rating": 4.8,
-        "recommend": null,
-        "recommendLink": null,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Verfassungsgeschichte", "ÖffRecht", "Neuzeit", "Göttingen"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     },
     {
         "title": "Justice, Baby!",
@@ -509,10 +497,10 @@
         "description": "Ein Podcast der Stiftung Forum Recht, moderiert von Kathrin Schön, der sich mit Fragen zu Recht und Gerechtigkeit auseinandersetzt.",
         "category": "allgemein",
         "rating": 4.2,
-        "recommend": null,
-        "recommendLink": null,
+        "recommend": "Keine Empfehlung",
+        "recommendLink": "#",
         "tags": ["Recht", "Gerechtigkeit", "Gesellschaft"],
-        "spotifyLink": null,
-        "appleLink": null
+        "spotifyLink": "#",
+        "appleLink": "#"
     }
 ]
