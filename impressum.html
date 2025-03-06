@@ -1,39 +1,102 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impressum – Jura-Podcasts</title>
-    <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 2rem auto; padding: 1rem; line-height: 1.6; }
-        h1 { color: #2c3e50; }
-        a { color: #e74c3c; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Impressum - Jura-Podcasts">
+  <title>Impressum | Jura-Podcasts</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Externes CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <h1>Impressum</h1>
-    <p>Angaben gemäß § 5 TMG:</p>
-    <p>
-        [Vorname Nachname]<br>
-        [Straße Hausnummer]<br>
-        [PLZ Ort]<br>
-        Deutschland
-    </p>
-    <p>
-        <strong>Kontakt:</strong><br>
-        E-Mail: [deine-email@example.com]
-    </p>
-    <p>
-        <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong><br>
-        [Vorname Nachname]<br>
-        [Straße Hausnummer]<br>
-        [PLZ Ort]
-    </p>
-    <p>
-        <strong>Haftungsausschluss:</strong><br>
-        Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird jedoch keine Gewähr übernommen. Als Diensteanbieter bin ich gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Eine Haftung für externe Links wird ausgeschlossen.
-    </p>
-    <p><a href="index.html">Zurück zur Startseite</a></p>
+<body data-theme="light">
+  <!-- Optional: Eigener Header oder Navigation -->
+  <header class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">Impressum</h1>
+      <p class="hero__subtitle">Rechtliche Informationen und Kontaktdaten</p>
+    </div>
+  </header>
+  
+  <main class="main">
+    <div class="container">
+      <section class="content-section">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <p>
+          Musterfirma GmbH<br>
+          Musterstraße 123<br>
+          12345 Musterstadt
+        </p>
+        <h2>Kontakt</h2>
+        <p>
+          Telefon: +49 123 4567890<br>
+          E-Mail: info@musterfirma.de
+        </p>
+        <!-- Füge hier weitere Impressumsangaben ein -->
+      </section>
+    </div>
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__column">
+          <h3 class="footer__column-title">Jura-Podcasts</h3>
+          <p class="footer__description">Deine zentrale Plattform für juristische Podcasts – sortiert, zusammengefasst und mit Lernhilfen für Studierende und Referendare.</p>
+          <div class="footer__social">
+            <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="footer__social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="footer__social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="footer__social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer__column">
+          <h3 class="footer__column-title">Rechtsgebiete</h3>
+          <ul class="footer__links">
+            <li class="footer__link-item"><a href="#" class="footer__link">Zivilrecht</a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link">Strafrecht</a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link">Öffentliches Recht</a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link">Arbeitsrecht</a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link">Handelsrecht</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h3 class="footer__column-title">Ressourcen</h3>
+          <ul class="footer__links">
+            <li class="footer__link-item"><a href="#" class="footer__link">Für Anfänger</a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link">Examensvorbereitung</a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link">Lernmaterialien</a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link">Podcast-Verzeichnis</a></li>
+            <li class="footer__link-item"><a href="#" class="footer__link">FAQ</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer__column">
+          <h3 class="footer__column-title">Kontakt</h3>
+          <ul class="footer__links">
+            <li class="footer__link-item"><a href="index.html" class="footer__link">Startseite</a></li>
+            <li class="footer__link-item"><a href="datenschutz.html" class="footer__link">Datenschutz</a></li>
+            <li class="footer__link-item"><a href="impressum.html" class="footer__link">Impressum</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer__copyright">
+        <p>© 2025 Jura-Podcasts. Alle Rechte vorbehalten.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Theme Switch Button -->
+  <button class="theme-switch" id="themeSwitch" aria-label="Farbschema wechseln">
+    <i class="fas fa-moon"></i>
+  </button>
+  
+  <!-- Externes JavaScript -->
+  <script src="scripts.js"></script>
 </body>
 </html>
